@@ -175,6 +175,15 @@ section.block{padding-block:88px}
 .closer{margin-top:28px;font-family:var(--font-display);font-size:1.25rem;max-width:36em}
 @media (max-width:640px){.cost{grid-template-columns:1fr;gap:14px;padding:24px}}
 
+/* pay options */
+.options{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.opt{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.opt .k{font-family:var(--font-mono);font-weight:600;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.opt p{color:var(--muted);font-size:.98rem}
+.opt ul{margin:0;padding-left:1.1em;color:var(--muted);font-size:.97rem;display:flex;flex-direction:column;gap:6px}
+.opt-note{margin-top:20px;padding:18px 20px;border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:var(--radius);font-size:1rem;max-width:52em}
+@media (max-width:760px){.options{grid-template-columns:1fr}}
+
 /* compare: trainer analogy */
 .compare{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .cmp{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:12px;min-width:0}
@@ -252,6 +261,7 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
       <a class="link" href="#trainer">The idea</a>
       <a class="link" href="#story">My story</a>
       <a class="link" href="#how">How it works</a>
+      <a class="link" href="#pay">Fees</a>
       <a class="link" href="#faq">FAQ</a>
       <a class="btn btn-primary" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Book a free call</a>
     </nav>
@@ -447,6 +457,40 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
     </div>
   </section>
 
+  <!-- PAY -->
+  <section class="block" id="pay" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">How I'm paid</span>
+        <h2>Two ways to work together. You choose.</h2>
+        <p>The first three conversations are free either way. After that, pick whichever suits you.</p>
+      </div>
+      <div class="options">
+        <div class="opt">
+          <span class="k">Option 1 · Flat annual fee</span>
+          <h3>Year-round coaching</h3>
+          <p>One fixed fee for the year, agreed upfront. You can invest wherever you like.</p>
+          <ul>
+            <li>Quarterly check-ins on your habits, goals and progress</li>
+            <li>Help with budgeting, saving and tracking spending</li>
+            <li>A call before big money decisions</li>
+          </ul>
+        </div>
+        <div class="opt">
+          <span class="k">Option 2 · Commission</span>
+          <h3>Invest through me</h3>
+          <p>No fee to you. If you choose to invest in mutual funds through me, I receive commission from the fund houses, and I'll always tell you what that is.</p>
+          <ul>
+            <li>The same check-ins and habit coaching</li>
+            <li>Help setting up and running your mutual fund investments</li>
+            <li>Paperwork and transactions handled for you</li>
+          </ul>
+        </div>
+      </div>
+      <p class="opt-note"><strong>There is no obligation to invest through me.</strong> My goal is to help you build the habits that lead to financial success. Where and how you invest is always your decision.</p>
+    </div>
+  </section>
+
   <!-- CREDENTIALS -->
   <section class="block" id="credentials" style="padding-top:0">
     <div class="wrap">
@@ -457,7 +501,7 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
       <div class="creds">
         <div class="cred"><span class="k">Qualification</span><span class="v">CFA® charterholder</span><p>Chartered Financial Analyst®, awarded by CFA Institute after three rigorous exams and qualifying work experience.</p></div>
         <div class="cred"><span class="k">Registration</span><span class="v">ARN-371565</span><p>AMFI-registered Mutual Fund Distributor. You can verify this on the <a href="https://www.amfiindia.com/locate-your-nearest-mutual-fund-distributor-details" target="_blank" rel="noopener">AMFI website</a>.</p></div>
-        <div class="cred"><span class="k">How I'm paid</span><span class="v">Commission from fund houses</span><p>The conversations are free for you. When you invest in mutual funds through me, I receive commission from the fund houses. I'll always tell you what that is.</p></div>
+        <div class="cred"><span class="k">How I'm paid</span><span class="v">Your choice</span><p>A flat annual coaching fee, or commission from fund houses if you invest in mutual funds through me. <a href="#pay">See both options</a>.</p></div>
       </div>
     </div>
   </section>
@@ -469,9 +513,9 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
       <div class="faq">
         <details><summary>What does a financial fitness trainer actually do?</summary><p>The same thing a fitness trainer or nutritionist does, applied to money. We understand your current situation, diagnose the habits that help and hurt you, set goals together, and then meet regularly so you stay on track while those habits change.</p></details>
         <details><summary>Are the first three conversations really free?</summary><p>Yes. There's no fee and no commitment. They're for understanding your situation and seeing whether we're a good fit.</p></details>
-        <details><summary>What happens after the three conversations?</summary><p>You decide. If you'd like to continue, we put your plan into action and meet every three months to review it. If not, you'll still leave with a much clearer picture of where you stand.</p></details>
+        <details><summary>What happens after the three conversations?</summary><p>You decide. If you'd like to continue, you pick how to pay (a flat annual fee, or commission if you invest through me), and we meet every three months to review your progress. If not, you'll still leave with a much clearer picture of where you stand.</p></details>
         <details><summary>What if I fall off track?</summary><p>You will, at some point. Everyone does. That is exactly what the quarterly check-ins are for: we notice it early, work out what got in the way, and adjust the plan so it fits your real life.</p></details>
-        <details><summary>How do you earn money?</summary><p>I'm an AMFI-registered Mutual Fund Distributor. When you invest in mutual funds through me, I earn commission from the fund houses. I don't charge you a separate fee.</p></details>
+        <details><summary>How do you earn money?</summary><p>You choose. You can pay a flat annual fee for year-round coaching, or, if you invest in mutual funds through me, I earn commission from the fund houses and you pay no fee. There is no obligation to invest through me.</p></details>
         <details><summary>Do I need a lot of money to start?</summary><p>No. Many people I talk to are just getting serious about saving. Starting early with a clear plan matters more than starting big.</p></details>
         <details><summary>Can we meet online?</summary><p>Yes. We can meet in person in Mumbai, or on Google Meet from anywhere in India. You choose when you book.</p></details>
         <details><summary>Can you promise returns?</summary><p>No one honestly can. Mutual fund returns depend on markets. What I can do is help you build good habits, stay disciplined, and avoid costly mistakes.</p></details>
@@ -518,7 +562,7 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
     </div>
     <div class="disc">
       <p class="risk">Mutual fund investments are subject to market risks. Read all scheme-related documents carefully.</p>
-      <p>Divesh Rajesh Mehta acts as an AMFI-registered Mutual Fund Distributor and deals in the distribution of mutual fund products. He is not registered with SEBI as an Investment Adviser. Commission is received from the mutual fund houses whose schemes are distributed. Past performance may or may not be sustained in future and is not a guarantee of future returns.</p>
+      <p>Divesh Rajesh Mehta acts as an AMFI-registered Mutual Fund Distributor and deals in the distribution of mutual fund products. He is not registered with SEBI as an Investment Adviser. Commission is received from the mutual fund houses whose schemes are distributed. Where a client opts for the annual fee, the fee is for financial habit coaching and education only and does not include investment advice. Past performance may or may not be sustained in future and is not a guarantee of future returns.</p>
       <p>CFA® and Chartered Financial Analyst® are registered trademarks owned by CFA Institute.</p>
     </div>
   </div>
