@@ -3,13 +3,25 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Divesh Mehta, CFA</title>
-<meta name="description" content="Divesh Mehta, CFA charterholder and AMFI-registered Mutual Fund Distributor (ARN-371565). Financial fitness trainer and personal finance coach. Like a fitness trainer for your money: we understand where you are, diagnose your habits, and keep you on track to your goals. First three conversations free.">
+<title>Divesh Mehta, CFA · Financial fitness trainer &amp; personal finance coach</title>
+<meta name="description" content="Money stress is rarely about income. Divesh Mehta, CFA, is a financial fitness trainer and personal finance coach who helps you build better money habits and stick to them. Your first three sessions are free. AMFI-registered Mutual Fund Distributor, ARN-371565.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Divesh Mehta, CFA">
+<meta property="og:title" content="You earn well. So why does money still feel stressful?">
+<meta property="og:description" content="Better money habits, and a trainer to keep you on them. Start with a free financial health check-up with Divesh Mehta, CFA.">
+<meta property="og:image" content="https://diveshmehta.netlify.app/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Divesh Mehta, CFA, financial fitness trainer and personal finance coach">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F5F7FB" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0A1424" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap">
 <style>
-/* Layout: calm single page, left-aligned editorial column; one bold moment = the "33×" figure */
+/* Layout: calm single page, left-aligned editorial column. One goal: a booked call or a WhatsApp message. */
 :root{
   --bg:#F5F7FB;          /* cool paper */
   --surface:#FFFFFF;
@@ -23,113 +35,208 @@
   --deep-fg:#EAF0F8;
   --deep-muted:#9FB2CC;
   --deep-accent:#8DB8FF; /* accent on navy */
+  --wa:#1DA851;          /* WhatsApp glyph */
+  --ok:#146C43;--ok-soft:#DDF3E7;
+  --warn:#8A5A00;--warn-soft:#FBEFD5;
+  --bad:#A4262C;--bad-soft:#FBE3E4;
   --font-display:"Libre Baskerville", Georgia, "Times New Roman", serif;
   --font-body:"Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
-  --font-mono:"Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
   --radius:10px;
   --max:1120px;
 }
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
   --bg:#0A1424;--surface:#111E33;--ink:#E6EDF7;--muted:#9AABC3;--line:#23324A;
-  --accent:#6FA2FF;--accent-ink:#0A1424;--accent-soft:#1B2E4D;--deep:#060E1A;--deep-fg:#E6EDF7;--deep-muted:#8A9BB4;--deep-accent:#8DB8FF;color-scheme:dark}}
+  --accent:#6FA2FF;--accent-ink:#0A1424;--accent-soft:#1B2E4D;--deep:#060E1A;--deep-fg:#E6EDF7;--deep-muted:#8A9BB4;--deep-accent:#8DB8FF;
+  --wa:#3DD07A;--ok:#7FD8A6;--ok-soft:#12321F;--warn:#F2C46B;--warn-soft:#382A0C;--bad:#FF9A9F;--bad-soft:#3B1619;color-scheme:dark}}
 :root[data-theme="dark"]{
   --bg:#0A1424;--surface:#111E33;--ink:#E6EDF7;--muted:#9AABC3;--line:#23324A;
-  --accent:#6FA2FF;--accent-ink:#0A1424;--accent-soft:#1B2E4D;--deep:#060E1A;--deep-fg:#E6EDF7;--deep-muted:#8A9BB4;--deep-accent:#8DB8FF;color-scheme:dark}
+  --accent:#6FA2FF;--accent-ink:#0A1424;--accent-soft:#1B2E4D;--deep:#060E1A;--deep-fg:#E6EDF7;--deep-muted:#8A9BB4;--deep-accent:#8DB8FF;
+  --wa:#3DD07A;--ok:#7FD8A6;--ok-soft:#12321F;--warn:#F2C46B;--warn-soft:#382A0C;--bad:#FF9A9F;--bad-soft:#3B1619;color-scheme:dark}
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
 a{color:inherit}
-.wrap{max-width:var(--max);margin:0 auto;padding-inline:20px}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
 h1,h2,h3{font-family:var(--font-display);font-weight:400;line-height:1.22;letter-spacing:-.01em;text-wrap:balance;margin:0}
 h1{font-size:clamp(2rem,4.6vw,3.3rem)}
 h2{font-size:clamp(1.55rem,3vw,2.15rem)}
 h3{font-size:1.25rem}
 p{margin:0}
-.eyebrow{font-family:var(--font-mono);font-weight:600;font-size:.95rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.eyebrow{font-weight:600;font-size:.95rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.fine{font-size:.82rem;color:var(--muted)}
 
 /* buttons */
-.btn{display:inline-flex;align-items:center;gap:.5em;padding:.85em 1.4em;border-radius:8px;font-weight:600;text-decoration:none;font-size:1rem;border:2px solid transparent;transition:transform .15s ease, background .15s ease;cursor:pointer;font-family:inherit}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;padding:.85em 1.4em;border-radius:8px;font-weight:600;text-decoration:none;font-size:1rem;line-height:1.2;border:2px solid transparent;transition:transform .15s ease, background .15s ease, color .15s ease;cursor:pointer;font-family:inherit;text-align:center}
 .btn-primary{background:var(--accent);color:var(--accent-ink)}
 .btn-primary:hover{transform:translateY(-1px);background:color-mix(in srgb,var(--accent) 88%,#000)}
 .btn-ghost{border-color:var(--ink);color:var(--ink);background:transparent}
 .btn-ghost:hover{background:var(--ink);color:var(--bg)}
+.btn svg{width:1.2em;height:1.2em;flex:none}
+.btn .wa-i{fill:var(--wa)}
+.btn-light{background:#FFFFFF;color:#0B1F3A}
+.btn-light:hover{transform:translateY(-1px);background:#E6EDF7}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.cta-note{font-size:.95rem;color:var(--muted)}
 
 /* header */
 header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
 .brand{display:flex;flex-direction:column;line-height:1.25;text-decoration:none;min-width:0}
 .brand b{font-family:var(--font-display);font-weight:400;font-size:1.2rem}
-.brand small{font-family:var(--font-mono);font-size:.68rem;color:var(--muted);letter-spacing:.04em}
+.brand small{font-size:.68rem;color:var(--muted);letter-spacing:.04em}
 .top nav{display:flex;align-items:center;gap:22px}
 .top nav a.link{text-decoration:none;font-weight:500;font-size:.95rem;color:var(--muted)}
 .top nav a.link:hover{color:var(--ink)}
-.top .btn{padding:.6em 1.1em;font-size:.92rem}
-@media (max-width:820px){.top nav a.link{display:none}}
+.top .btn{padding:.6em 1.05em;font-size:.92rem}
+@media (max-width:980px){.top nav a.link{display:none}}
+@media (max-width:760px){header.top{position:static}.top .btn-ghost{display:none}}
+@media (max-width:560px){.top .btn{display:none}}
 @media (max-width:420px){.brand small{display:none}}
 
 /* hero */
-.hero{padding-block:64px 72px}
+.hero{padding-block:64px 80px}
 .hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:56px;align-items:center}
-.hero-copy{display:flex;flex-direction:column;gap:24px;min-width:0}
+.hero-copy{display:flex;flex-direction:column;gap:22px;min-width:0}
 .hero h1 em{font-style:italic;color:var(--accent)}
-.lede{font-size:1.18rem;color:var(--muted);max-width:34em}
-.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+.lede{font-size:1.2rem;color:var(--muted);max-width:32em}
+.lede b{color:var(--ink);font-weight:600}
 .free-note{font-size:1.1rem;color:var(--muted)}
 .free-note strong{color:var(--ink)}
+.where{font-size:.95rem;color:var(--muted);margin-top:-12px}
 
 .portrait{position:relative;max-width:420px;width:100%;justify-self:end}
 .photo{aspect-ratio:4/5;width:100%;max-width:100%;border-radius:var(--radius);background:
   radial-gradient(120% 80% at 30% 20%,var(--accent-soft) 0%,var(--surface) 60%);
   border:1px solid var(--line);display:grid;place-items:center;overflow:hidden}
+.photo picture{display:contents}
 .photo img{width:100%;height:100%;object-fit:cover;object-position:50% 20%;display:block}
 .photo .initials{font-family:var(--font-display);font-size:5rem;color:var(--muted)}
-.id-card{position:absolute;left:-28px;bottom:-24px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;box-shadow:0 12px 30px -16px rgba(0,0,0,.35);display:flex;flex-direction:column;gap:2px;max-width:calc(100% + 28px)}
+.id-card{position:absolute;left:-28px;bottom:-32px;background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px 18px;box-shadow:0 12px 30px -16px rgba(0,0,0,.35);display:flex;flex-direction:column;gap:2px;max-width:calc(100% + 28px)}
 .id-card b{font-family:var(--font-display);font-weight:400;font-size:1.1rem}
-.id-card span{font-family:var(--font-mono);font-size:.74rem;color:var(--muted)}
+.id-card span{font-size:.78rem;color:var(--muted)}
+.id-card .proof{margin-top:8px;padding-top:8px;border-top:1px solid var(--line);font-size:.86rem;color:var(--ink);max-width:24em}
+.id-card .proof a{font-weight:600;color:var(--accent);white-space:nowrap}
 @media (max-width:860px){
-  .hero{padding-block:36px 56px}
-  .hero-grid{grid-template-columns:1fr;gap:48px}
-  .portrait{justify-self:start;max-width:340px}
-  .id-card{left:12px}
+  .hero{padding-block:32px 56px}
+  .hero-grid{grid-template-columns:1fr;gap:28px}
+  .portrait{justify-self:stretch;max-width:none;display:flex;align-items:flex-start;gap:14px;padding:16px;background:var(--surface);border:1px solid var(--line);border-radius:12px}
+  .photo{width:72px;height:72px;aspect-ratio:auto;border-radius:50%;flex:none}
+  .photo img{object-position:50% 50%}
+  .photo .initials{font-size:1.8rem}
+  .id-card{position:static;box-shadow:none;border:0;padding:0;background:none;max-width:none;min-width:0}
+  .id-card .proof{border-top:0;padding-top:0;margin-top:6px}
 }
-
-/* story band */
-.band{background:var(--deep);color:var(--deep-fg);padding-block:80px}
-.band .eyebrow{color:var(--deep-muted)}
-.story{display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:center}
-.big{font-family:var(--font-display);font-size:clamp(6rem,17vw,12rem);line-height:.85;color:var(--deep-accent);letter-spacing:-.02em}
-.big small{display:block;font-family:var(--font-mono);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--deep-muted);margin-top:14px;line-height:1.4}
-.story-copy{display:flex;flex-direction:column;gap:18px;min-width:0;max-width:40em}
-.story-copy p{color:color-mix(in srgb,var(--deep-fg) 86%,transparent)}
-.timeline{margin-top:10px;display:flex;flex-direction:column;gap:8px}
-.track{position:relative;height:10px;border-radius:999px;background:color-mix(in srgb,var(--deep-fg) 14%,transparent);overflow:hidden}
-.track i{position:absolute;inset:0 0 0 0;border-radius:999px;background:linear-gradient(90deg,color-mix(in srgb,var(--deep-accent) 25%,transparent),var(--deep-accent))}
-.ticks{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:.76rem;color:var(--deep-muted);gap:12px}
-.ticks span:last-child{text-align:right}
-.fine{font-size:.82rem;color:var(--deep-muted)!important}
-@media (max-width:760px){.story{grid-template-columns:1fr;gap:28px}}
+@media (max-width:560px){.hero-copy .cta-row .btn{flex:1 1 100%}}
 
 /* sections */
 section.block{padding-block:88px}
-.head{display:flex;flex-direction:column;gap:14px;max-width:44em;margin-bottom:44px}
+.tint{background:var(--surface);border-block:1px solid var(--line)}
+.head{display:flex;flex-direction:column;gap:14px;max-width:46em;margin-bottom:40px}
 .head p{color:var(--muted);font-size:1.08rem}
+@media (max-width:760px){section.block{padding-block:64px}}
 
-/* who */
-.worries{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
-.worry{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:10px}
-.worry q{font-family:var(--font-display);font-size:1.15rem;line-height:1.35;quotes:"“" "”"}
-.worry p{color:var(--muted);font-size:.95rem}
+/* sound familiar */
+.familiar{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center}
+.symptoms{list-style:none;margin:0;padding:22px 24px;display:flex;flex-direction:column;gap:12px;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:var(--radius)}
+.symptoms li{display:grid;grid-template-columns:24px 1fr;gap:8px;font-size:1.04rem}
+.symptoms li::before{content:"✓";color:var(--accent);font-weight:700}
+.reframe{display:flex;flex-direction:column;gap:14px}
+.reframe .say{font-family:var(--font-display);font-size:clamp(1.3rem,2.4vw,1.6rem);line-height:1.35}
+.reframe p{color:var(--muted)}
+@media (max-width:860px){.familiar{grid-template-columns:1fr;gap:28px}}
+.cost{margin-top:40px;display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;background:var(--deep);color:var(--deep-fg);border-radius:var(--radius);padding:28px 32px}
+.cost .fig{font-family:var(--font-display);font-size:clamp(2.4rem,6vw,3.6rem);color:var(--deep-accent);line-height:1}
+.cost .fig small{display:block;font-family:var(--font-body);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--deep-muted);margin-top:8px}
+.cost p{color:color-mix(in srgb,var(--deep-fg) 88%,transparent)}
+.cost .fine{margin-top:8px;color:var(--deep-muted)}
+.closer{margin-top:28px;font-family:var(--font-display);font-size:1.25rem;max-width:36em}
+@media (max-width:640px){.cost{grid-template-columns:1fr;gap:14px;padding:24px}}
 
-/* steps */
+/* the idea */
+.compare{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.cmp{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.cmp.me{border:2px solid var(--accent);background:var(--surface)}
+.cmp .k{font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.cmp.me .k{color:var(--accent)}
+.cmp ul{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
+.cmp li{color:var(--muted);font-size:.97rem;padding-left:18px;position:relative}
+.cmp li::before{content:"";position:absolute;left:0;top:.6em;width:8px;height:8px;border-radius:50%;background:var(--line)}
+.cmp.me li{color:var(--ink)}
+.cmp.me li::before{background:var(--accent)}
+@media (max-width:860px){.compare{grid-template-columns:1fr}}
+
+/* money vitals self-check */
+.vitals{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.vq{margin:0;min-width:0;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);padding:20px 22px}
+.vq legend{float:left;width:100%;padding:0;margin:0 0 12px;font-weight:600;font-size:1.02rem;line-height:1.45}
+.vq .vn{display:block;font-size:.74rem;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin-bottom:4px}
+.opts{clear:both;display:flex;flex-wrap:wrap;gap:8px}
+.opts label{position:relative;cursor:pointer}
+.opts input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.opts span{display:inline-block;padding:.45em .95em;border:1px solid var(--line);border-radius:999px;background:var(--bg);font-size:.95rem;font-weight:500;color:var(--ink);transition:background .15s,border-color .15s,color .15s}
+.opts label:hover span{border-color:var(--ink)}
+.opts input:checked + span{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.opts input:focus-visible + span{outline:3px solid var(--accent);outline-offset:2px}
+.vprogress{margin-top:16px;font-size:.95rem;color:var(--muted)}
+.vresult{margin-top:20px;background:var(--surface);border:2px solid var(--accent);border-radius:12px;padding:26px 28px;display:flex;flex-direction:column;gap:14px}
+.vresult[hidden]{display:none}
+.vlist{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0 28px}
+.vlist li{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);font-weight:500}
+.chip{flex:none;font-size:.78rem;font-weight:700;letter-spacing:.03em;padding:3px 10px;border-radius:999px}
+.chip.ok{background:var(--ok-soft);color:var(--ok)}
+.chip.warn{background:var(--warn-soft);color:var(--warn)}
+.chip.bad{background:var(--bad-soft);color:var(--bad)}
+.vsum{font-size:1.08rem;max-width:44em}
+@media (max-width:860px){.vlist{grid-template-columns:1fr 1fr}}
+@media (max-width:760px){.vitals{grid-template-columns:1fr}.vlist{grid-template-columns:1fr}.vresult{padding:22px 20px}}
+
+/* why it happens: from -> to */
+.shifts{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
+.shift,.shift-head{display:grid;grid-template-columns:1fr 36px 1fr;gap:20px;align-items:start}
+.shift-head{padding-block:12px;border-bottom:1px solid var(--line);font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.shift-head span:last-child{color:var(--accent)}
+.shift{padding-block:22px;border-bottom:1px solid var(--line)}
+.shift h3{font-size:1.12rem;margin-bottom:6px}
+.shift p{color:var(--muted);font-size:.97rem}
+.shift .to h3{color:var(--accent)}
+.shift .arrow{font-size:1.3rem;color:var(--muted);text-align:center;padding-top:2px}
+@media (max-width:760px){
+  .shift-head{display:none}
+  .shift{grid-template-columns:1fr;gap:10px}
+  .shift .arrow{display:none}
+  .shift .to{padding:12px 14px;border-left:3px solid var(--accent);background:var(--surface);border-radius:0 8px 8px 0}
+  .shift .to::before{content:"Instead";display:block;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+}
+
+/* story band */
+.band{background:var(--deep);color:var(--deep-fg);padding-block:88px}
+.band .eyebrow{color:var(--deep-muted)}
+.story{display:grid;grid-template-columns:auto 1fr;gap:56px;align-items:center}
+.big{font-family:var(--font-display);font-size:clamp(6rem,17vw,12rem);line-height:.85;color:var(--deep-accent);letter-spacing:-.02em}
+.big small{display:block;font-family:var(--font-body);font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--deep-muted);margin-top:14px;line-height:1.4}
+.story-copy{display:flex;flex-direction:column;gap:18px;min-width:0;max-width:40em}
+.story-copy p{color:color-mix(in srgb,var(--deep-fg) 86%,transparent)}
+.story-copy .calm{font-family:var(--font-display);font-size:1.3rem;color:var(--deep-fg)}
+.timeline{margin-top:6px;display:flex;flex-direction:column;gap:8px}
+.track{position:relative;height:10px;border-radius:999px;background:color-mix(in srgb,var(--deep-fg) 14%,transparent);overflow:hidden}
+.track i{position:absolute;inset:0;border-radius:999px;background:linear-gradient(90deg,color-mix(in srgb,var(--deep-accent) 25%,transparent),var(--deep-accent))}
+.ticks{display:flex;justify-content:space-between;font-size:.76rem;color:var(--deep-muted);gap:12px}
+.ticks span:last-child{text-align:right}
+.band .fine{color:var(--deep-muted)}
+@media (max-width:760px){.story{grid-template-columns:1fr;gap:28px}.band{padding-block:64px}}
+
+/* how it works */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:2px solid var(--ink)}
 .step{padding:24px 22px 8px 0;display:flex;flex-direction:column;gap:10px;min-width:0}
 .step + .step{padding-left:22px;border-left:1px solid var(--line)}
-.step .n{font-family:var(--font-mono);font-size:.78rem;color:var(--muted);letter-spacing:.08em}
-.step .tag{align-self:flex-start;font-family:var(--font-mono);font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:999px;background:var(--accent-soft);color:var(--ink);font-weight:600}
+.step .n{font-size:.78rem;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.step .tag{align-self:flex-start;font-size:.7rem;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:999px;background:var(--accent-soft);color:var(--ink);font-weight:600}
 .step p{color:var(--muted);font-size:.97rem}
+.after{margin-top:32px;display:flex;flex-direction:column;gap:20px}
+.after .keep{font-family:var(--font-display);font-size:1.2rem;max-width:36em}
 @media (max-width:900px){
   .steps{grid-template-columns:1fr 1fr}
   .step:nth-child(3){border-left:0;padding-left:0}
@@ -141,77 +248,25 @@ section.block{padding-block:88px}
   .step + .step{border-top:1px solid var(--line)}
 }
 
-/* trainer */
-.trainer{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-.trainer .head{margin-bottom:0}
-.checklist{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;border-top:1px solid var(--line)}
-.checklist li{display:grid;grid-template-columns:28px 1fr;gap:12px;padding-block:16px;border-bottom:1px solid var(--line)}
-.checklist li::before{content:"";width:12px;height:12px;margin-top:8px;border-radius:50%;border:2px solid var(--accent)}
-.checklist b{display:block;font-weight:600}
-.checklist span{color:var(--muted);font-size:.95rem}
-@media (max-width:820px){.trainer{grid-template-columns:1fr;gap:32px}}
-
-/* hero symptoms */
-.symptoms{list-style:none;margin:0;padding:18px 20px;display:flex;flex-direction:column;gap:10px;background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:var(--radius)}
-.symptoms .q{font-family:var(--font-display);font-size:1.05rem;margin-bottom:2px}
-.symptoms li{display:grid;grid-template-columns:22px 1fr;gap:8px;font-size:1rem}
-.symptoms li::before{content:"✓";color:var(--accent);font-weight:700}
-.symptoms li.q::before{content:none}
-.pitch{font-size:1.1rem;max-width:36em}
-.pitch b{color:var(--accent)}
-
-/* causes */
-.causes{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.cause{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:8px;min-width:0}
-.cause .n{font-family:var(--font-display);font-size:1.6rem;color:var(--accent);line-height:1}
-.cause p{color:var(--muted);font-size:.97rem}
-@media (max-width:900px){.causes{grid-template-columns:1fr 1fr}}
-@media (max-width:560px){.causes{grid-template-columns:1fr}}
-.cost{margin-top:24px;display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;background:var(--deep);color:var(--deep-fg);border-radius:var(--radius);padding:28px 32px}
-.cost .fig{font-family:var(--font-display);font-size:clamp(2.4rem,6vw,3.6rem);color:var(--deep-accent);line-height:1}
-.cost .fig small{display:block;font-family:var(--font-body);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;color:var(--deep-muted);margin-top:8px}
-.cost p{color:color-mix(in srgb,var(--deep-fg) 88%,transparent)}
-.cost .fine{margin-top:8px}
-.closer{margin-top:28px;font-family:var(--font-display);font-size:1.25rem;max-width:36em}
-@media (max-width:640px){.cost{grid-template-columns:1fr;gap:14px;padding:24px}}
-
-/* pay options */
+/* fees */
+.includes{list-style:none;margin:0 0 20px;padding:18px 20px;display:grid;grid-template-columns:repeat(4,1fr);gap:10px 20px;background:var(--bg);border:1px solid var(--line);border-radius:var(--radius)}
+.includes li{display:grid;grid-template-columns:20px 1fr;gap:6px;font-size:.97rem;font-weight:500}
+.includes li::before{content:"✓";color:var(--accent);font-weight:700}
+@media (max-width:900px){.includes{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.includes{grid-template-columns:1fr}}
 .options{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.opt{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:12px;min-width:0}
-.opt .k{font-family:var(--font-mono);font-weight:600;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.opt{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.opt .k{font-weight:600;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
 .opt p{color:var(--muted);font-size:.98rem}
 .opt ul{margin:0;padding-left:1.1em;color:var(--muted);font-size:.97rem;display:flex;flex-direction:column;gap:6px}
+.opt .fine{margin-top:auto;padding-top:6px}
 .opt-note{margin-top:20px;padding:18px 20px;border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:var(--radius);font-size:1rem;max-width:52em}
 @media (max-width:760px){.options{grid-template-columns:1fr}}
-
-/* compare: trainer analogy */
-.compare{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
-.cmp{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:12px;min-width:0}
-.cmp.me{border:2px solid var(--accent)}
-.cmp .k{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.cmp ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:8px}
-.cmp li{color:var(--muted);font-size:.97rem;padding-left:18px;position:relative}
-.cmp li::before{content:"";position:absolute;left:0;top:.6em;width:8px;height:8px;border-radius:50%;background:var(--line)}
-.cmp.me li{color:var(--ink)}
-.cmp.me li::before{background:var(--accent)}
-@media (max-width:860px){.compare{grid-template-columns:1fr}}
-
-/* habits */
-.habits{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.hcol{border:1px solid var(--line);border-radius:var(--radius);padding:24px;background:var(--surface);display:flex;flex-direction:column;gap:6px;min-width:0}
-.hcol h3{margin-bottom:6px}
-.hcol ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
-.hcol li{padding-block:12px;border-top:1px solid var(--line);display:grid;grid-template-columns:22px 1fr;gap:10px}
-.hcol li i{font-style:normal;font-family:var(--font-mono);font-weight:500}
-.hcol.bad li i{color:var(--muted)}
-.hcol.good li i{color:var(--accent)}
-.hcol li span{font-size:.97rem}
-@media (max-width:760px){.habits{grid-template-columns:1fr}}
 
 /* credentials */
 .creds{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
 .cred{border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:8px;background:var(--surface)}
-.cred .k{font-family:var(--font-mono);font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.cred .k{font-size:.74rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
 .cred .v{font-family:var(--font-display);font-size:1.3rem}
 .cred p{color:var(--muted);font-size:.95rem}
 .cred a{font-weight:600}
@@ -222,22 +277,26 @@ section.block{padding-block:88px}
 .faq details{border-bottom:1px solid var(--line)}
 .faq summary{list-style:none;cursor:pointer;padding:20px 40px 20px 0;font-weight:600;font-size:1.05rem;position:relative}
 .faq summary::-webkit-details-marker{display:none}
-.faq summary::after{content:"+";position:absolute;right:4px;top:14px;font-family:var(--font-mono);font-size:1.4rem;color:var(--muted)}
+.faq summary::after{content:"+";position:absolute;right:4px;top:14px;font-size:1.4rem;color:var(--muted)}
 .faq details[open] summary::after{content:"–"}
 .faq details p{padding-bottom:22px;color:var(--muted);max-width:44em}
 
 /* contact */
-.contact{background:var(--surface);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
 .contact-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:start}
 .contact-grid .head{margin-bottom:0}
+.next{list-style:none;margin:8px 0 0;padding:0;display:flex;flex-direction:column;gap:14px;counter-reset:n}
+.next li{display:grid;grid-template-columns:34px 1fr;gap:12px;counter-increment:n}
+.next li::before{content:counter(n);display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--accent-soft);color:var(--ink);font-weight:700;font-size:.9rem}
+.next b{display:block}
+.next span{color:var(--muted);font-size:.97rem}
 .channels{display:flex;flex-direction:column;gap:14px}
 .channel{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:18px 20px;border:1px solid var(--line);border-radius:12px;background:var(--bg)}
-.channel .lbl{font-family:var(--font-mono);font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block}
+.channel .lbl{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);display:block}
 .channel .val{font-size:1.08rem;font-weight:600;user-select:all;word-break:break-all}
 .channel .acts{display:flex;gap:8px}
 .mini{font:600 .85rem var(--font-body);padding:.5em .9em;border-radius:8px;border:1px solid var(--line);background:var(--surface);color:var(--ink);cursor:pointer;text-decoration:none}
 .mini:hover{border-color:var(--ink)}
-@media (max-width:860px){.contact-grid{grid-template-columns:1fr;gap:32px}}
+@media (max-width:860px){.contact-grid{grid-template-columns:1fr;gap:36px}}
 
 /* footer */
 footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
@@ -246,6 +305,15 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
 .disc{display:flex;flex-direction:column;gap:10px}
 .risk{font-weight:600;color:var(--ink)}
 @media (max-width:760px){.foot{grid-template-columns:1fr;gap:24px}}
+
+/* phone: sticky contact bar once the hero buttons scroll away */
+.mbar{display:none}
+@media (max-width:760px){
+  body{padding-bottom:calc(76px + env(safe-area-inset-bottom,0px))}
+  .mbar{display:flex;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:20;padding-top:10px;padding-bottom:calc(10px + env(safe-area-inset-bottom,0px));padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));background:color-mix(in srgb,var(--bg) 94%,transparent);backdrop-filter:blur(8px);border-top:1px solid var(--line);transform:translateY(110%);visibility:hidden;transition:transform .2s ease,visibility .2s}
+  .mbar.show{transform:none;visibility:visible}
+  .mbar .btn{flex:1 1 0;padding:.8em .6em;font-size:.95rem}
+}
 </style>
 </head>
 <body>
@@ -257,13 +325,12 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
       <small>AMFI-registered Mutual Fund Distributor · ARN-371565</small>
     </a>
     <nav aria-label="Main">
-      <a class="link" href="#causes">Why it happens</a>
-      <a class="link" href="#trainer">The idea</a>
-      <a class="link" href="#story">My story</a>
       <a class="link" href="#how">How it works</a>
-      <a class="link" href="#pay">Fees</a>
+      <a class="link" href="#story">My story</a>
+      <a class="link" href="#fees">Fees</a>
       <a class="link" href="#faq">FAQ</a>
-      <a class="btn btn-primary" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Book a free call</a>
+      <a class="btn btn-ghost" data-cta="header-wa" href="https://wa.me/917022388789?text=Hi%20Divesh%2C%20I%20saw%20your%20website%20and%20I%27d%20like%20to%20know%20more%20about%20the%20free%20financial%20health%20check-up." target="_blank" rel="noopener"><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa-glyph"/></svg>WhatsApp</a>
+      <a class="btn btn-primary" data-cta="header-book" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Book free check-up</a>
     </nav>
   </div>
 </header>
@@ -273,54 +340,53 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
   <section class="hero">
     <div class="wrap hero-grid">
       <div class="hero-copy">
-        <span class="eyebrow">Financial fitness trainer &amp; personal finance coach · Mumbai and online across India</span>
+        <span class="eyebrow">Financial fitness trainer &amp; personal finance coach</span>
         <h1>You earn well. So why does money still feel <em>stressful</em>?</h1>
-        <ul class="symptoms" aria-label="Does this sound like you?">
-          <li class="q" style="display:block" aria-hidden="true">Does this sound like you?</li>
+        <p class="lede">You don't need a bigger salary or a hot tip. You need better money habits, and someone to keep you on them until money finally feels calm. <b>We start with a free financial health check-up.</b></p>
+        <div class="cta-row" id="hero-cta">
+          <a class="btn btn-primary" data-cta="hero-book" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Book my free check-up</a>
+          <a class="btn btn-ghost" data-cta="hero-wa" href="https://wa.me/917022388789?text=Hi%20Divesh%2C%20I%20saw%20your%20website%20and%20I%27d%20like%20to%20know%20more%20about%20the%20free%20financial%20health%20check-up." target="_blank" rel="noopener"><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa-glyph"/></svg>WhatsApp me</a>
+        </div>
+        <p class="free-note"><strong>Your first three sessions are completely free.</strong> No obligation to continue.</p>
+        <p class="where">On Google Meet from anywhere in India, or in person in Mumbai.</p>
+      </div>
+
+      <div class="portrait">
+        <div class="photo">
+          <picture>
+            <source media="(max-width:860px)" srcset="divesh-face.jpg">
+            <img src="divesh.jpg" alt="Divesh Mehta" width="880" height="1100" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'initials',textContent:'DM'}))">
+          </picture>
+        </div>
+        <div class="id-card">
+          <b>Divesh Rajesh Mehta, CFA</b>
+          <span>Financial fitness trainer &amp; personal finance coach</span>
+          <span>AMFI-registered Mutual Fund Distributor · ARN-371565</span>
+          <p class="proof">First salary ₹14,200. Financially&nbsp;independent. <a href="#story">My story</a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOUND FAMILIAR -->
+  <section class="block" id="familiar" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Sound familiar?</span>
+        <h2>Does this sound like you?</h2>
+      </div>
+      <div class="familiar">
+        <ul class="symptoms">
           <li>You're always a little anxious about money, even in a good month.</li>
           <li>You don't really know where your salary goes, or how much you actually save.</li>
           <li>You keep meaning to "sort out your finances", and another year goes by.</li>
           <li>You have financial goals, but no clear idea how to get there.</li>
           <li>You feel your spending habits, or not knowing enough about money, are holding you back from your goals.</li>
         </ul>
-        <p class="pitch">You don't need a bigger salary or a hot tip. You need better money habits, and someone to keep you on them. I'm your <b>financial fitness trainer and personal finance coach</b>: like a fitness trainer or a nutritionist, I assess where you are, diagnose what's holding you back, and keep you on track until the new habits stick.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Book your free first session</a>
-          <a class="btn btn-ghost" href="#causes">What holds people back</a>
+        <div class="reframe">
+          <p class="say">If you nodded along, you're not bad with money.</p>
+          <p>Nobody teaches us this at school or at work, so most of us figure it out alone, by trial and error. The good news is that money habits can be trained, just like fitness. That's where I come in.</p>
         </div>
-        <p class="free-note"><strong>Your first three conversations are completely free.</strong> No obligation to continue.</p>
-      </div>
-
-      <div class="portrait">
-        <div class="photo">
-          <img src="divesh.jpg" alt="Divesh Mehta" width="880" height="1100" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'initials',textContent:'DM'}))">
-        </div>
-        <div class="id-card">
-          <b>Divesh Rajesh Mehta</b>
-          <span>Financial fitness trainer &amp; personal finance coach</span>
-          <span>CFA® charterholder</span>
-          <span>AMFI-registered Mutual Fund Distributor</span>
-          <span>ARN-371565</span>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- CAUSES -->
-  <section class="block" id="causes" style="padding-top:16px">
-    <div class="wrap">
-      <div class="head">
-        <span class="eyebrow">Why it happens</span>
-        <h2>What actually holds people back from their financial goals.</h2>
-        <p>In conversations with people in their 20s, 30s and 40s, the same few patterns come up again and again. Most of them have little to do with income.</p>
-      </div>
-      <div class="causes">
-        <div class="cause"><span class="n">01</span><h3>No idea where the money goes</h3><p>Without tracking, spending feels smaller than it is and saving becomes whatever is left over, which is usually not much.</p></div>
-        <div class="cause"><span class="n">02</span><h3>Lifestyle creep</h3><p>Every raise brings a bigger phone, car or holiday. Income rises, but savings stay where they were.</p></div>
-        <div class="cause"><span class="n">03</span><h3>Waiting for the "right time"</h3><p>After the next bonus, after the wedding, once markets settle. Meanwhile, the most valuable years of compounding slip by.</p></div>
-        <div class="cause"><span class="n">04</span><h3>No safety net</h3><p>Without an emergency fund, every surprise becomes a credit card bill or a broken investment.</p></div>
-        <div class="cause"><span class="n">05</span><h3>Investing on emotion and tips</h3><p>Buying what friends or social media are excited about, then selling in a panic when markets fall.</p></div>
-        <div class="cause"><span class="n">06</span><h3>No plan, and no one checking in</h3><p>Good intentions fade without clear goals and someone who holds you to them.</p></div>
       </div>
       <div class="cost">
         <div class="fig">₹52 lakh<small>the cost of waiting 5 years</small></div>
@@ -334,16 +400,17 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
   </section>
 
   <!-- THE IDEA -->
-  <section class="block" id="trainer" style="padding-top:8px">
+  <section class="block tint" id="idea">
     <div class="wrap">
       <div class="head">
         <span class="eyebrow">The idea</span>
-        <h2>Your financial health works a lot like your physical health.</h2>
-        <p>Nobody gets fit from one gym session or one diet chart. Results come from small habits, repeated, with someone in your corner who notices when you slip. Money is no different.</p>
+        <h2>Your financial health deserves the same care as your physical and mental health.</h2>
+        <p>Money worries don't stay in your bank account. They follow you into your sleep, your work and your relationships. We wouldn't expect to get fit without a trainer, or get through a hard time without someone to talk to. Yet with money, most of us are on our own until something goes wrong.</p>
       </div>
       <div class="compare">
         <div class="cmp">
-          <span class="k">A fitness trainer</span>
+          <span class="k">For your body</span>
+          <h3>A fitness trainer</h3>
           <ul>
             <li>Checks your starting point</li>
             <li>Spots weak areas and bad form</li>
@@ -352,24 +419,143 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
           </ul>
         </div>
         <div class="cmp">
-          <span class="k">A nutritionist</span>
+          <span class="k">For your mind</span>
+          <h3>A counsellor</h3>
           <ul>
-            <li>Looks at what you actually eat</li>
-            <li>Separates good habits from bad ones</li>
-            <li>Suggests changes you can live with</li>
-            <li>Reviews progress and adjusts</li>
+            <li>Listens without judgement</li>
+            <li>Helps you understand your patterns</li>
+            <li>Builds healthier ways to cope</li>
+            <li>Checks in on how you're feeling</li>
           </ul>
         </div>
         <div class="cmp me">
-          <span class="k">Your finance trainer &amp; coach</span>
+          <span class="k">For your money</span>
+          <h3>Your financial fitness trainer</h3>
           <ul>
-            <li>Understands your full money picture</li>
+            <li>Understands your full money picture, and your money story</li>
             <li>Diagnoses your good and bad money habits</li>
-            <li>Builds a plan around your family's goals</li>
-            <li>Keeps you on track, every three months</li>
+            <li>Builds a habit plan around your family's goals</li>
+            <li>Keeps you on track, and checks in on how you feel</li>
           </ul>
         </div>
       </div>
+    </div>
+  </section>
+
+  <!-- MONEY VITALS -->
+  <section class="block" id="vitals">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Quick self-check</span>
+        <h2>Check your money vitals in one minute.</h2>
+        <p>A doctor starts by checking your vitals. These six say a lot about your financial health. Your answers stay in your browser: nothing is saved or sent.</p>
+      </div>
+      <form class="vitals" id="vitals-form" onsubmit="return false">
+        <fieldset class="vq">
+          <legend><span class="vn">01 · Savings rate</span>How much of your take-home pay do you save or invest each month?</legend>
+          <div class="opts">
+            <label><input type="radio" name="v1" value="2"><span>20% or more</span></label>
+            <label><input type="radio" name="v1" value="1"><span>10 to 20%</span></label>
+            <label><input type="radio" name="v1" value="0"><span>Less than 10%, or not sure</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="vq">
+          <legend><span class="vn">02 · Emergency cushion</span>If your income stopped tomorrow, how long could your savings cover your expenses?</legend>
+          <div class="opts">
+            <label><input type="radio" name="v2" value="2"><span>6 months or more</span></label>
+            <label><input type="radio" name="v2" value="1"><span>3 to 6 months</span></label>
+            <label><input type="radio" name="v2" value="0"><span>Less than 3 months</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="vq">
+          <legend><span class="vn">03 · EMI load</span>How much of your monthly income goes to EMIs and credit card bills?</legend>
+          <div class="opts">
+            <label><input type="radio" name="v3" value="2"><span>Under 20%, or none</span></label>
+            <label><input type="radio" name="v3" value="1"><span>20 to 40%</span></label>
+            <label><input type="radio" name="v3" value="0"><span>Over 40%</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="vq">
+          <legend><span class="vn">04 · Protection</span>Do you have your own health insurance, and life cover if anyone depends on your income?</legend>
+          <div class="opts">
+            <label><input type="radio" name="v4" value="2"><span>Yes, both</span></label>
+            <label><input type="radio" name="v4" value="1"><span>Only through work</span></label>
+            <label><input type="radio" name="v4" value="0"><span>No, or not sure</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="vq">
+          <legend><span class="vn">05 · Goal clarity</span>Do you know what your big goals will cost, and whether you're on track?</legend>
+          <div class="opts">
+            <label><input type="radio" name="v5" value="2"><span>Yes, clearly</span></label>
+            <label><input type="radio" name="v5" value="1"><span>Roughly</span></label>
+            <label><input type="radio" name="v5" value="0"><span>Not really</span></label>
+          </div>
+        </fieldset>
+        <fieldset class="vq">
+          <legend><span class="vn">06 · Money stress</span>How often do money worries affect your sleep, mood or relationships?</legend>
+          <div class="opts">
+            <label><input type="radio" name="v6" value="2"><span>Rarely</span></label>
+            <label><input type="radio" name="v6" value="1"><span>Sometimes</span></label>
+            <label><input type="radio" name="v6" value="0"><span>Often</span></label>
+          </div>
+        </fieldset>
+      </form>
+      <p class="vprogress" id="vprogress" aria-live="polite">Answer all six to see your results.</p>
+      <noscript><p class="vprogress">Your browser has JavaScript turned off, so results can't be shown here. Bring your answers to your free check-up instead.</p></noscript>
+      <div class="vresult" id="vresult" hidden>
+        <h3>Your money vitals</h3>
+        <ul class="vlist"></ul>
+        <p class="vsum"></p>
+        <div class="cta-row">
+          <a class="btn btn-primary" data-cta="vitals-book" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Book my free check-up</a>
+          <a class="btn btn-ghost" data-cta="vitals-wa" data-wa-result href="https://wa.me/917022388789" target="_blank" rel="noopener"><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa-glyph"/></svg>Send my results on WhatsApp</a>
+        </div>
+        <p class="fine">A rough self-check to help you reflect. It isn't advice, and your free check-up goes much deeper.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY IT HAPPENS -->
+  <section class="block" id="why" style="padding-top:0">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Why it happens</span>
+        <h2>What holds people back, and the habits we build instead.</h2>
+        <p>In conversations with people in their 20s, 30s and 40s, the same few patterns come up again and again. Most of them have little to do with income.</p>
+      </div>
+      <div class="shift-head" aria-hidden="true"><span>What holds people back</span><span></span><span>The habit we build instead</span></div>
+      <ol class="shifts">
+        <li class="shift">
+          <div class="from"><h3>No idea where the money goes</h3><p>Without tracking, spending feels smaller than it is, and saving becomes whatever is left over.</p></div>
+          <span class="arrow" aria-hidden="true">→</span>
+          <div class="to"><h3>Know your numbers</h3><p>A simple monthly picture of what comes in, what goes out and what stays.</p></div>
+        </li>
+        <li class="shift">
+          <div class="from"><h3>Lifestyle creep</h3><p>Every raise brings a bigger phone, car or holiday. Income rises, but savings stay where they were.</p></div>
+          <span class="arrow" aria-hidden="true">→</span>
+          <div class="to"><h3>Save first, automatically</h3><p>Savings go out on payday, and rise every time your salary does.</p></div>
+        </li>
+        <li class="shift">
+          <div class="from"><h3>Waiting for the "right time"</h3><p>After the next bonus, after the wedding, once markets settle. Meanwhile, years of compounding slip by.</p></div>
+          <span class="arrow" aria-hidden="true">→</span>
+          <div class="to"><h3>Start small, start now</h3><p>A routine you can keep beats a perfect plan you keep postponing.</p></div>
+        </li>
+        <li class="shift">
+          <div class="from"><h3>No safety net</h3><p>Without an emergency fund, every surprise becomes a credit card bill or a broken investment.</p></div>
+          <span class="arrow" aria-hidden="true">→</span>
+          <div class="to"><h3>A cushion first</h3><p>Money set aside for surprises before investing, so they stop being emergencies.</p></div>
+        </li>
+        <li class="shift">
+          <div class="from"><h3>Investing on emotion and tips</h3><p>Buying what friends or social media are excited about, then selling in a panic when markets fall.</p></div>
+          <span class="arrow" aria-hidden="true">→</span>
+          <div class="to"><h3>Goals before products</h3><p>Every rupee linked to a goal you care about, and reviewed on a schedule, not on headlines.</p></div>
+        </li>
+        <li class="shift">
+          <div class="from"><h3>No plan, and no one checking in</h3><p>Good intentions fade without clear goals and someone who holds you to them.</p></div>
+          <span class="arrow" aria-hidden="true">→</span>
+          <div class="to"><h3>A trainer in your corner</h3><p>A check-in every quarter to catch slips early and keep you going.</p></div>
+        </li>
+      </ol>
     </div>
   </section>
 
@@ -382,10 +568,14 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
         <h2>I started with ₹0 and a first salary of ₹14,200.</h2>
         <p>That was 2014. I didn't come from money, and nobody around me talked about investing. Studying for the CFA charter taught me how money works. What actually moved the needle, though, was habit: saving first, staying invested through bad years, and not letting one decision undo the last ten.</p>
         <p>Twelve years of those habits later, I have saved and invested 33 times my family's annual expenses. That is financial independence, often called FIRE. I no longer need a salary to live the life we want.</p>
+        <p class="calm">The biggest change wasn't the number. It was the peace of mind.</p>
         <p>I know how hard it is to build good habits alone. Now I want to be the trainer I wish I'd had.</p>
         <div class="timeline" aria-label="From zero in 2014 to 33 times annual expenses in 2026">
           <div class="track"><i></i></div>
           <div class="ticks"><span>2014 · ₹0</span><span>12 years of habits</span><span>2026 · 33×</span></div>
+        </div>
+        <div class="cta-row">
+          <a class="btn btn-light" data-cta="story-wa" href="https://wa.me/917022388789?text=Hi%20Divesh%2C%20I%20read%20your%20story%20on%20your%20website%20and%20I%27d%20like%20to%20know%20more%20about%20the%20free%20financial%20health%20check-up." target="_blank" rel="noopener"><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa-glyph"/></svg>Talk to me on WhatsApp</a>
         </div>
         <p class="fine">This is my personal journey. Every family's situation is different, and my results are not a promise of yours.</p>
       </div>
@@ -393,97 +583,59 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
   </section>
 
   <!-- HOW -->
-  <section class="block" id="how" style="padding-top:0">
+  <section class="block" id="how">
     <div class="wrap">
       <div class="head">
         <span class="eyebrow">How it works</span>
-        <h2>Assess, diagnose, plan, then train.</h2>
-        <p>We start with you, not with products. The first three conversations are free.</p>
+        <h2>Start with a free financial health check-up.</h2>
+        <p>Three relaxed sessions, on Google Meet or in person in Mumbai. You don't need to prepare anything, and we start with you, not with products.</p>
       </div>
       <div class="steps">
-        <div class="step"><span class="n">CONVERSATION 1</span><span class="tag">Free</span><h3>Assess</h3><p>Your current situation: income, spending, savings, loans and investments, plus how you grew up with money. A full, honest starting point.</p></div>
-        <div class="step"><span class="n">CONVERSATION 2</span><span class="tag">Free</span><h3>Diagnose</h3><p>Which habits are working for you and which are quietly costing you. No judgement, just a clear picture.</p></div>
-        <div class="step"><span class="n">CONVERSATION 3</span><span class="tag">Free</span><h3>Plan</h3><p>Your goals for yourself and your family, and the few habit changes that will make the biggest difference.</p></div>
-        <div class="step"><span class="n">THEN, IF YOU CHOOSE</span><span class="tag">Every 3 months</span><h3>Train</h3><p>Regular check-ins to review progress, catch slips early and adjust as your life changes.</p></div>
+        <div class="step"><span class="n">Session 1</span><span class="tag">Free</span><h3>Assess</h3><p>Where you are today: income, spending, savings, loans and investments, plus how you grew up with money. A full, honest starting point.</p></div>
+        <div class="step"><span class="n">Session 2</span><span class="tag">Free</span><h3>Diagnose</h3><p>Your money vitals, and which habits are working for you and which are quietly costing you. No judgement, just a clear picture.</p></div>
+        <div class="step"><span class="n">Session 3</span><span class="tag">Free</span><h3>Plan</h3><p>Your goals for yourself and your family, and the few habit changes that will make the biggest difference.</p></div>
+        <div class="step"><span class="n">Then, if you choose</span><span class="tag">Every 3 months</span><h3>Train</h3><p>Regular check-ins to review progress, catch slips early and adjust as your life changes.</p></div>
       </div>
-    </div>
-  </section>
-
-  <!-- HABITS -->
-  <section class="block" id="habits" style="padding-top:0">
-    <div class="wrap">
-      <div class="head">
-        <span class="eyebrow">The diagnosis</span>
-        <h2>Some of the habits we look at together.</h2>
-        <p>Everyone has a mix. The point isn't to feel bad about the old ones. It's to swap them, one at a time, for ones that compound.</p>
-      </div>
-      <div class="habits">
-        <div class="hcol bad">
-          <h3>Habits that hold you back</h3>
-          <ul>
-            <li><i>–</i><span>Saving whatever is left at the end of the month</span></li>
-            <li><i>–</i><span>No emergency fund, so every surprise becomes debt</span></li>
-            <li><i>–</i><span>Checking markets daily and reacting to the news</span></li>
-            <li><i>–</i><span>Investing on tips from friends and social media</span></li>
-            <li><i>–</i><span>Lifestyle growing every time income does</span></li>
-          </ul>
-        </div>
-        <div class="hcol good">
-          <h3>Habits we build instead</h3>
-          <ul>
-            <li><i>+</i><span>Paying yourself first, automatically, every month</span></li>
-            <li><i>+</i><span>A safety cushion set aside before investing</span></li>
-            <li><i>+</i><span>Reviewing on a schedule, not on headlines</span></li>
-            <li><i>+</i><span>Every rupee linked to a goal you care about</span></li>
-            <li><i>+</i><span>Raising savings each time your salary rises</span></li>
-          </ul>
+      <div class="after">
+        <p class="keep">Whether or not we continue, you'll leave with a clear picture of where you stand and what to change first.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" data-cta="how-book" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Book my free check-up</a>
+          <a class="btn btn-ghost" data-cta="how-wa" href="https://wa.me/917022388789?text=Hi%20Divesh%2C%20I%20saw%20your%20website%20and%20I%27d%20like%20to%20know%20more%20about%20the%20free%20financial%20health%20check-up." target="_blank" rel="noopener"><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa-glyph"/></svg>WhatsApp me</a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TRAINER -->
-  <section class="block" style="padding-top:0">
-    <div class="wrap trainer">
-      <div class="head">
-        <span class="eyebrow">Staying on track</span>
-        <h2>The plan is the easy part. Sticking to it is where a trainer helps.</h2>
-        <p>Most people know roughly what they should do with money, just as most people know they should exercise. What changes things is someone who checks in, notices when you drift, and keeps you going when markets get noisy. Over time you build the financial muscle to make good decisions on your own.</p>
-      </div>
-      <ul class="checklist">
-        <li><div><b>A check-in every quarter</b><span>Your goals, your habits and your progress, reviewed together.</span></div></li>
-        <li><div><b>Honest feedback when you slip</b><span>Slips happen. We spot them early and get you back on track.</span></div></li>
-        <li><div><b>A call before big decisions</b><span>A home loan, a job change, a windfall. Talk it through before you commit.</span></div></li>
-        <li><div><b>We check in on how you feel, too</b><span>Lower money anxiety is part of the goal, alongside the numbers.</span></div></li>
-      </ul>
-    </div>
-  </section>
-
-  <!-- PAY -->
-  <section class="block" id="pay" style="padding-top:0">
+  <!-- FEES -->
+  <section class="block tint" id="fees">
     <div class="wrap">
       <div class="head">
         <span class="eyebrow">How I'm paid</span>
         <h2>Two ways to work together. You choose.</h2>
-        <p>The first three conversations are free either way. After that, pick whichever suits you.</p>
+        <p>The check-up is free either way. After that, pick whichever suits you. Both include the same year-round coaching:</p>
       </div>
+      <ul class="includes">
+        <li>A check-in every quarter</li>
+        <li>Honest feedback when you slip</li>
+        <li>A call before big money decisions</li>
+        <li>Check-ins on how you feel, too</li>
+      </ul>
       <div class="options">
         <div class="opt">
           <span class="k">Option 1 · Flat annual fee</span>
           <h3>Year-round coaching</h3>
-          <p>One fixed fee for the year, agreed upfront. You can invest wherever you like.</p>
+          <p>One fixed fee for the year, agreed upfront.</p>
           <ul>
-            <li>Quarterly check-ins on your habits, goals and progress</li>
             <li>Help with budgeting, saving and tracking spending</li>
-            <li>A call before big money decisions</li>
+            <li>Invest wherever you like</li>
           </ul>
+          <p class="fine">The fee is for coaching and education on money habits. It does not include investment advice.</p>
         </div>
         <div class="opt">
           <span class="k">Option 2 · Commission</span>
           <h3>Invest through me</h3>
           <p>No fee to you. If you choose to invest in mutual funds through me, I receive commission from the fund houses, and I'll always tell you what that is.</p>
           <ul>
-            <li>The same check-ins and habit coaching</li>
             <li>Help setting up and running your mutual fund investments</li>
             <li>Paperwork and transactions handled for you</li>
           </ul>
@@ -494,7 +646,7 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
   </section>
 
   <!-- CREDENTIALS -->
-  <section class="block" id="credentials" style="padding-top:0">
+  <section class="block" id="credentials">
     <div class="wrap">
       <div class="head">
         <span class="eyebrow">Credentials and transparency</span>
@@ -503,7 +655,7 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
       <div class="creds">
         <div class="cred"><span class="k">Qualification</span><span class="v">CFA® charterholder</span><p>Chartered Financial Analyst®, awarded by CFA Institute after three rigorous exams and qualifying work experience.</p></div>
         <div class="cred"><span class="k">Registration</span><span class="v">ARN-371565</span><p>AMFI-registered Mutual Fund Distributor. You can verify this on the <a href="https://www.amfiindia.com/locate-your-nearest-mutual-fund-distributor-details" target="_blank" rel="noopener">AMFI website</a>.</p></div>
-        <div class="cred"><span class="k">How I'm paid</span><span class="v">Your choice</span><p>A flat annual coaching fee, or commission from fund houses if you invest in mutual funds through me. <a href="#pay">See both options</a>.</p></div>
+        <div class="cred"><span class="k">Your privacy</span><span class="v">Private and judgement-free</span><p>What you share stays between us. I will never ask for your passwords, OTPs or PINs.</p></div>
       </div>
     </div>
   </section>
@@ -514,10 +666,13 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
       <div class="head"><span class="eyebrow">Questions</span><h2>Things people usually ask</h2></div>
       <div class="faq">
         <details><summary>What does a financial fitness trainer actually do?</summary><p>The same thing a fitness trainer or nutritionist does, applied to money. We understand your current situation, diagnose the habits that help and hurt you, set goals together, and then meet regularly so you stay on track while those habits change.</p></details>
-        <details><summary>Are the first three conversations really free?</summary><p>Yes. There's no fee and no commitment. They're for understanding your situation and seeing whether we're a good fit.</p></details>
-        <details><summary>What happens after the three conversations?</summary><p>You decide. If you'd like to continue, you pick how to pay (a flat annual fee, or commission if you invest through me), and we meet every three months to review your progress. If not, you'll still leave with a much clearer picture of where you stand.</p></details>
+        <details><summary>What happens in the free check-up?</summary><p>Three sessions. In the first, we look at where you are today. In the second, we diagnose the habits that help and hurt you. In the third, we agree the few changes that will make the biggest difference. There's no fee and no commitment, and you don't need to prepare anything.</p></details>
+        <details><summary>Will you try to sell me something?</summary><p>No. The free sessions are about you and your habits, not products. If you later want help investing in mutual funds, you can choose to do it through me, or anywhere else. There's no obligation either way.</p></details>
+        <details><summary>I'm embarrassed about my finances. Should I still reach out?</summary><p>Yes, please. Most people feel that way at first, and it usually means you're ready for a change. There's no judgement here, only a starting point.</p></details>
+        <details><summary>Can my spouse or partner join?</summary><p>Yes. Money is usually a family matter, and it helps when both of you are part of the conversation.</p></details>
+        <details><summary>Are you an investment adviser?</summary><p>No. I'm an AMFI-registered Mutual Fund Distributor, not a SEBI-registered Investment Adviser. The annual fee is for coaching and education on money habits, and doesn't include investment advice. If you choose to invest in mutual funds through me, I'm paid by commission from the fund houses, not by you.</p></details>
+        <details><summary>What happens after the three sessions?</summary><p>You decide. If you'd like to continue, you pick how to pay (a flat annual fee, or commission if you invest through me), and we meet every three months to review your progress. If not, you'll still leave with a much clearer picture of where you stand.</p></details>
         <details><summary>What if I fall off track?</summary><p>You will, at some point. Everyone does. That is exactly what the quarterly check-ins are for: we notice it early, work out what got in the way, and adjust the plan so it fits your real life.</p></details>
-        <details><summary>How do you earn money?</summary><p>You choose. You can pay a flat annual fee for year-round coaching, or, if you invest in mutual funds through me, I earn commission from the fund houses and you pay no fee. There is no obligation to invest through me.</p></details>
         <details><summary>Do I need a lot of money to start?</summary><p>No. Many people I talk to are just getting serious about saving. Starting early with a clear plan matters more than starting big.</p></details>
         <details><summary>Can we meet online?</summary><p>Yes. We can meet in person in Mumbai, or on Google Meet from anywhere in India. You choose when you book.</p></details>
         <details><summary>Can you promise returns?</summary><p>No one honestly can. Mutual fund returns depend on markets. What I can do is help you build good habits, stay disciplined, and avoid costly mistakes.</p></details>
@@ -526,28 +681,30 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
   </section>
 
   <!-- CONTACT -->
-  <section class="block contact" id="contact">
+  <section class="block tint" id="contact">
     <div class="wrap contact-grid">
       <div class="head">
-        <span class="eyebrow">Book a call</span>
-        <h2>Start with a free first session.</h2>
-        <p>Pick a time that suits you on my calendar. We can meet in person in Mumbai or on Google Meet, and you don't need to prepare anything. We'll start by understanding where you are today. Prefer to message first? WhatsApp or email works too.</p>
+        <span class="eyebrow">Your next step</span>
+        <h2>Book your free financial health check-up.</h2>
+        <p>Pick a time that suits you on my calendar, or send me a WhatsApp message if you'd like to ask something first. I reply to every message personally.</p>
+        <ol class="next">
+          <li><div><b>Pick a time, or message me</b><span>Choose Google Meet or in person in Mumbai when you book.</span></div></li>
+          <li><div><b>We talk</b><span>You don't need to prepare anything. We start by understanding where you are today.</span></div></li>
+          <li><div><b>You decide</b><span>After three free sessions, continue only if it's helping.</span></div></li>
+        </ol>
         <div class="cta-row" style="margin-top:8px">
-          <a class="btn btn-primary" id="book-link" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Pick a time on my calendar</a>
-          <a class="btn btn-ghost" href="https://wa.me/917022388789?text=Hi%20Divesh%2C%20I%27d%20like%20to%20book%20my%20free%20first%20conversation." target="_blank" rel="noopener">Message on WhatsApp</a>
+          <a class="btn btn-primary" id="book-link" data-cta="final-book" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Book my free check-up</a>
+          <a class="btn btn-ghost" data-cta="final-wa" href="https://wa.me/917022388789?text=Hi%20Divesh%2C%20I%20saw%20your%20website%20and%20I%27d%20like%20to%20know%20more%20about%20the%20free%20financial%20health%20check-up." target="_blank" rel="noopener"><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa-glyph"/></svg>WhatsApp me</a>
         </div>
       </div>
       <div class="channels">
         <div class="channel">
           <div><span class="lbl">Phone and WhatsApp</span><span class="val" id="phone">+91 70223 88789</span></div>
-          <div class="acts"><a class="mini" href="tel:+917022388789">Call</a><button class="mini" type="button" data-copy="+917022388789">Copy</button></div>
+          <div class="acts"><a class="mini" href="tel:+917022388789">Call</a><a class="mini" data-cta="contact-wa" href="https://wa.me/917022388789" target="_blank" rel="noopener">WhatsApp</a></div>
         </div>
         <div class="channel">
           <div><span class="lbl">Email</span><span class="val" id="email">mehta.divesh0603@gmail.com</span></div>
-          <div class="acts"><a class="mini" href="mailto:mehta.divesh0603@gmail.com?subject=Free%20first%20conversation">Email</a><button class="mini" type="button" data-copy="mehta.divesh0603@gmail.com">Copy</button></div>
-        </div>
-        <div class="channel">
-          <div><span class="lbl">Website</span><span class="val">diveshmehta.in</span></div>
+          <div class="acts"><a class="mini" href="mailto:mehta.divesh0603@gmail.com?subject=Free%20financial%20health%20check-up">Email</a><button class="mini" type="button" data-copy="mehta.divesh0603@gmail.com">Copy</button></div>
         </div>
       </div>
     </div>
@@ -560,7 +717,7 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
       <b>Divesh Rajesh Mehta, CFA</b><br>
       AMFI-registered Mutual Fund Distributor<br>
       ARN-371565<br>
-      © 2026 diveshmehta.in
+      © 2026 Divesh Rajesh Mehta
     </div>
     <div class="disc">
       <p class="risk">Mutual fund investments are subject to market risks. Read all scheme-related documents carefully.</p>
@@ -570,7 +727,15 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
   </div>
 </footer>
 
+<nav class="mbar" id="mbar" aria-label="Contact Divesh">
+  <a class="btn btn-ghost" data-cta="bar-wa" href="https://wa.me/917022388789?text=Hi%20Divesh%2C%20I%20saw%20your%20website%20and%20I%27d%20like%20to%20know%20more%20about%20the%20free%20financial%20health%20check-up." target="_blank" rel="noopener"><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa-glyph"/></svg>WhatsApp</a>
+  <a class="btn btn-primary" data-cta="bar-book" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Book free check-up</a>
+</nav>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa-glyph" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol></svg>
+
 <script>
+// Copy buttons in the contact section
 document.querySelectorAll('[data-copy]').forEach(function(btn){
   btn.addEventListener('click',function(){
     var text=btn.getAttribute('data-copy');
@@ -583,6 +748,62 @@ document.querySelectorAll('[data-copy]').forEach(function(btn){
     try{navigator.clipboard.writeText(text).then(done,fallback)}catch(e){fallback()}
   });
 });
+
+// Money vitals self-check: everything stays in the browser
+(function(){
+  var form=document.getElementById('vitals-form');
+  var out=document.getElementById('vresult');
+  var prog=document.getElementById('vprogress');
+  if(!form||!out||!prog) return;
+  var names=['Savings rate','Emergency cushion','EMI load','Protection','Goal clarity','Money stress'];
+  var label={2:'Healthy',1:'Worth a look',0:'Needs attention'};
+  var cls={2:'ok',1:'warn',0:'bad'};
+  var list=out.querySelector('.vlist'), sum=out.querySelector('.vsum'), wa=out.querySelector('[data-wa-result]');
+  function update(){
+    var vals=names.map(function(_,i){var c=form.querySelector('input[name="v'+(i+1)+'"]:checked');return c?Number(c.value):null});
+    var answered=vals.filter(function(v){return v!==null}).length;
+    if(answered<names.length){
+      prog.textContent=answered?answered+' of 6 answered.':'Answer all six to see your results.';
+      out.hidden=true;return;
+    }
+    prog.textContent='All six answered. Here are your results.';
+    var groups={0:[],1:[],2:[]};
+    list.textContent='';
+    vals.forEach(function(v,i){
+      groups[v].push(names[i]);
+      var li=document.createElement('li'),n=document.createElement('span'),c=document.createElement('b');
+      n.textContent=names[i];c.className='chip '+cls[v];c.textContent=label[v];
+      li.appendChild(n);li.appendChild(c);list.appendChild(li);
+    });
+    var bad=groups[0].length, warn=groups[1].length;
+    sum.textContent = (bad===0&&warn===0)
+      ? "All six look healthy. That's rare, and worth protecting. A check-up can help you keep it that way and aim higher."
+      : bad>=3
+        ? "Several vitals need attention. That's very common, and very fixable: a few habits, kept up, move these numbers more than you'd expect."
+        : "A few vitals are worth a closer look. That's exactly what the free check-up is for: finding the one or two habits that will make the biggest difference.";
+    var msg='Hi Divesh, I did the money vitals check on your website.';
+    if(groups[0].length) msg+='\nNeeds attention: '+groups[0].join(', ');
+    if(groups[1].length) msg+='\nWorth a look: '+groups[1].join(', ');
+    if(groups[2].length) msg+='\nHealthy: '+groups[2].join(', ');
+    msg+="\nI'd like to book my free financial health check-up.";
+    wa.href='https://wa.me/917022388789?text='+encodeURIComponent(msg);
+    out.hidden=false;
+  }
+  form.addEventListener('change',update);
+  update();
+})();
+
+// Phone: show the bottom contact bar once the hero buttons are out of view, hide it at the contact section
+(function(){
+  var bar=document.getElementById('mbar'), hero=document.getElementById('hero-cta'), contact=document.getElementById('contact');
+  if(!bar||!hero||!contact||!('IntersectionObserver' in window)) return;
+  var heroIn=true, contactIn=false;
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.target===hero) heroIn=e.isIntersecting; else contactIn=e.isIntersecting; });
+    bar.classList.toggle('show',!heroIn&&!contactIn);
+  });
+  io.observe(hero); io.observe(contact);
+})();
 </script>
 </body>
 </html>
