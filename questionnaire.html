@@ -1,0 +1,430 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Investor questionnaire · Divesh Mehta, CFA</title>
+<meta name="description" content="A short questionnaire about your income, savings, goals and comfort with risk, so Divesh can prepare for your free financial health check-up. Takes about 5 minutes; only your phone number is required.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Divesh Mehta, CFA">
+<meta property="og:title" content="Investor questionnaire: get ready for your free check-up">
+<meta property="og:description" content="Five minutes on your money, goals and comfort with risk. Only your phone number is required.">
+<meta property="og:image" content="https://diveshmehta.netlify.app/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#F5F7FB" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0A1424" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@400;500;600;700&display=swap">
+<style>
+/* Same tokens and header as calculators.html. One column of question cards, then a thank-you panel. */
+:root{
+  --bg:#F5F7FB;
+  --surface:#FFFFFF;
+  --ink:#0B1F3A;
+  --muted:#4A5A72;
+  --line:#D7DEEA;
+  --accent:#1E4FA3;
+  --accent-ink:#FFFFFF;
+  --accent-soft:#DCE7FA;
+  --deep:#0B1F3A;
+  --deep-fg:#EAF0F8;
+  --deep-muted:#9FB2CC;
+  --deep-accent:#8DB8FF;
+  --wa:#1DA851;
+  --ok:#146C43;--ok-soft:#DDF3E7;
+  --warn:#8A5A00;--warn-soft:#FBEFD5;
+  --bad:#A4262C;--bad-soft:#FBE3E4;
+  --inv:#8A9BB4;          /* chart: amount invested */
+  --font-display:"Libre Baskerville", Georgia, "Times New Roman", serif;
+  --font-body:"Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --radius:10px;
+  --max:1120px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0A1424;--surface:#111E33;--ink:#E6EDF7;--muted:#9AABC3;--line:#23324A;
+  --accent:#6FA2FF;--accent-ink:#0A1424;--accent-soft:#1B2E4D;--deep:#060E1A;--deep-fg:#E6EDF7;--deep-muted:#8A9BB4;--deep-accent:#8DB8FF;
+  --wa:#3DD07A;--ok:#7FD8A6;--ok-soft:#12321F;--warn:#F2C46B;--warn-soft:#382A0C;--bad:#FF9A9F;--bad-soft:#3B1619;--inv:#6E7F99;color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0A1424;--surface:#111E33;--ink:#E6EDF7;--muted:#9AABC3;--line:#23324A;
+  --accent:#6FA2FF;--accent-ink:#0A1424;--accent-soft:#1B2E4D;--deep:#060E1A;--deep-fg:#E6EDF7;--deep-muted:#8A9BB4;--deep-accent:#8DB8FF;
+  --wa:#3DD07A;--ok:#7FD8A6;--ok-soft:#12321F;--warn:#F2C46B;--warn-soft:#382A0C;--bad:#FF9A9F;--bad-soft:#3B1619;--inv:#6E7F99;color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:var(--max);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--font-display);font-weight:400;line-height:1.22;letter-spacing:-.01em;text-wrap:balance;margin:0}
+h1{font-size:clamp(1.8rem,4vw,2.8rem)}
+h2{font-size:clamp(1.45rem,2.6vw,1.9rem)}
+h3{font-size:1.15rem}
+p{margin:0}
+.eyebrow{font-weight:600;font-size:.95rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:6px}
+.fine{font-size:.82rem;color:var(--muted)}
+.num{font-variant-numeric:tabular-nums}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.55em;padding:.85em 1.4em;border-radius:8px;font-weight:600;text-decoration:none;font-size:1rem;line-height:1.2;border:2px solid transparent;transition:transform .15s ease, background .15s ease, color .15s ease;cursor:pointer;font-family:inherit;text-align:center}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover{transform:translateY(-1px);background:color-mix(in srgb,var(--accent) 88%,#000)}
+.btn-ghost{border-color:var(--ink);color:var(--ink);background:transparent}
+.btn-ghost:hover{background:var(--ink);color:var(--bg)}
+.btn svg{width:1.2em;height:1.2em;flex:none}
+.btn .wa-i{fill:var(--wa)}
+.btn-light{background:#FFFFFF;color:#0B1F3A}
+.btn-light:hover{transform:translateY(-1px);background:#E6EDF7}
+.btn-ghost-light{border-color:var(--deep-fg);color:var(--deep-fg);background:transparent}
+.btn-ghost-light:hover{background:var(--deep-fg);color:var(--deep)}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;align-items:center}
+
+/* header (same as home page) */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{display:flex;flex-direction:column;line-height:1.25;text-decoration:none;min-width:0}
+.brand b{font-family:var(--font-display);font-weight:400;font-size:1.2rem}
+.brand small{font-size:.68rem;color:var(--muted);letter-spacing:.04em}
+.top nav{display:flex;align-items:center;gap:22px}
+.top nav a.link{white-space:nowrap;text-decoration:none;font-weight:500;font-size:.95rem;color:var(--muted)}
+.top nav a.link:hover,.top nav a.link[aria-current="page"]{color:var(--ink)}
+.top nav a.link[aria-current="page"]{text-decoration:underline;text-decoration-color:var(--accent);text-decoration-thickness:2px;text-underline-offset:6px}
+.top .btn{padding:.6em 1.05em;font-size:.92rem}
+@media (max-width:1120px){.top nav a.link{display:none}}
+@media (max-width:760px){header.top{position:static}.top .btn-ghost{display:none}}
+@media (max-width:560px){.top .btn{display:none}}
+@media (max-width:420px){.brand small{display:none}}
+
+/* intro */
+.intro{padding-block:44px 24px}
+.intro h1{margin-top:10px;max-width:22em}
+.intro .lede{margin-top:14px;font-size:1.12rem;color:var(--muted);max-width:38em}
+.intro .meta{display:flex;flex-wrap:wrap;gap:8px 18px;margin-top:16px;font-size:.92rem;color:var(--muted)}
+.intro .meta span::before{content:"✓ ";color:var(--accent);font-weight:700}
+
+/* form */
+.qform{max-width:760px;display:flex;flex-direction:column;gap:18px;padding-bottom:56px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+fieldset.card{margin:0;min-width:0}
+.card legend{float:left;width:100%;padding:0;margin-bottom:4px;font-family:var(--font-display);font-size:1.25rem}
+.card legend+*{clear:both}
+.card .why{font-size:.92rem;color:var(--muted);margin-bottom:6px}
+.q{padding-top:16px;margin-top:16px;border-top:1px solid var(--line)}
+.q:first-of-type{border-top:0;margin-top:6px;padding-top:6px}
+.q>.lbl,.q>label.lbl{display:block;font-weight:600;margin-bottom:8px}
+.q .opt-note{font-weight:400;color:var(--muted);font-size:.86rem}
+.req{color:var(--bad);font-weight:700}
+.txt{width:100%;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);font:500 1.02rem var(--font-body);padding:10px 12px}
+.txt:focus{outline:none;border-color:var(--accent)}
+textarea.txt{min-height:92px;resize:vertical;line-height:1.5}
+.phone{display:flex;align-items:center;border:1px solid var(--line);border-radius:8px;background:var(--bg);padding-left:12px;max-width:340px}
+.phone:focus-within{border-color:var(--accent)}
+.phone span{color:var(--muted);font-weight:600}
+.phone input{flex:1;min-width:0;border:0;background:transparent;color:var(--ink);font:600 1.05rem var(--font-body);padding:10px 8px;font-variant-numeric:tabular-nums}
+.phone input:focus{outline:none}
+.err{display:block;font-size:.86rem;color:var(--bad);margin-top:6px;min-height:1.2em}
+.opts{display:flex;flex-wrap:wrap;gap:8px}
+.opts label{position:relative;display:inline-flex}
+.opts input{position:absolute;opacity:0;inset:0;margin:0;cursor:pointer}
+.opts span{display:inline-block;padding:.5em 1em;border:1px solid var(--line);border-radius:999px;background:var(--bg);font-size:.96rem;line-height:1.35;cursor:pointer;transition:border-color .15s,background .15s,color .15s}
+.opts label:hover span{border-color:var(--accent)}
+.opts input:checked+span{background:var(--accent);border-color:var(--accent);color:var(--accent-ink)}
+.opts input:focus-visible+span{outline:3px solid var(--accent);outline-offset:2px}
+.opts.stack{flex-direction:column;align-items:flex-start}
+.opts.stack span{border-radius:10px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.submit-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+.submit-row .btn{padding:.95em 1.8em;font-size:1.05rem}
+.submit-row .btn[disabled]{opacity:.6;cursor:progress;transform:none}
+.form-msg{font-size:.95rem}
+.form-msg.bad{color:var(--bad)}
+.consent{font-size:.86rem;color:var(--muted)}
+
+/* thank-you */
+.done{scroll-margin-top:96px;max-width:760px;margin-bottom:56px;background:var(--deep);color:var(--deep-fg);border-radius:var(--radius);padding:32px 28px}
+.done[hidden],.qform[hidden]{display:none}
+.done h2{color:var(--deep-fg)}
+.done p{color:var(--deep-muted);margin-top:12px;font-size:1.06rem;max-width:34em}
+.done .cta-row{margin-top:22px}
+
+
+/* footer (same as home page) */
+footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted);border-top:1px solid var(--line)}
+.foot{display:grid;grid-template-columns:1fr 1.4fr;gap:40px}
+.foot b{color:var(--ink);font-weight:600}
+.disc{display:flex;flex-direction:column;gap:10px}
+.risk{font-weight:600;color:var(--ink)}
+@media (max-width:760px){.foot{grid-template-columns:1fr;gap:24px}}
+
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+</style>
+</head>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="index.html">
+      <b>Divesh Mehta, CFA</b>
+      <small>AMFI-registered Mutual Fund Distributor · ARN-371565</small>
+    </a>
+    <nav aria-label="Main">
+      <a class="link" href="index.html#how">How it works</a>
+      <a class="link" href="index.html#story">My story</a>
+      <a class="link" href="index.html#fees">Fees</a>
+      <a class="link" href="calculators.html">Calculators</a>
+      <a class="link" href="questionnaire.html" aria-current="page">Questionnaire</a>
+      <a class="btn btn-ghost" data-cta="q-header-wa" href="https://wa.me/917022388789?text=Hi%20Divesh%2C%20I%20filled%20the%20questionnaire%20on%20your%20website%20and%20I%27d%20like%20to%20know%20more%20about%20the%20free%20financial%20health%20check-up." target="_blank" rel="noopener"><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa-glyph"/></svg>WhatsApp</a>
+      <a class="btn btn-primary" data-cta="q-header-book" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Book free check-up</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <section class="intro">
+    <div class="wrap">
+      <p class="eyebrow">Before your free check-up</p>
+      <h1>Tell me about your money, goals and comfort with risk</h1>
+      <p class="lede">Your answers help me prepare a mutual fund plan that fits you before we speak. It takes about 5 minutes, and only your phone number is required.</p>
+      <div class="meta"><span>About 5 minutes</span><span>Skip anything you like</span><span>Seen only by me</span></div>
+    </div>
+  </section>
+
+  <div class="wrap">
+  <form class="qform" id="qform" novalidate>
+    <fieldset class="card">
+      <legend>About you</legend>
+      <p class="why">So I know who you are planning for.</p>
+      <div class="q"><label class="lbl" for="phone">Mobile number (WhatsApp) <span class="req" aria-hidden="true">*</span></label>
+        <div class="phone"><span aria-hidden="true">+91</span><input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel-national" placeholder="98765 43210" required aria-describedby="phone-err"></div>
+        <span class="err" id="phone-err" aria-live="polite"></span>
+      </div>
+      <div class="q"><label class="lbl" for="name">Your name</label>
+        <input class="txt" id="name" name="name" type="text" autocomplete="name">
+      </div>
+      <div class="q"><label class="lbl" for="email">Email</label>
+        <input class="txt" id="email" name="email" type="email" autocomplete="email" inputmode="email">
+      </div>
+      <div class="q" role="group" aria-labelledby="l-age"><span class="lbl" id="l-age">Your age</span>
+        <div class="opts"><label><input type="radio" name="age" value="Under 25"><span>Under 25</span></label><label><input type="radio" name="age" value="25 to 34"><span>25 to 34</span></label><label><input type="radio" name="age" value="35 to 44"><span>35 to 44</span></label><label><input type="radio" name="age" value="45 to 54"><span>45 to 54</span></label><label><input type="radio" name="age" value="55 to 64"><span>55 to 64</span></label><label><input type="radio" name="age" value="65 or above"><span>65 or above</span></label></div>
+      </div>
+      <div class="q" role="group" aria-labelledby="l-dep"><span class="lbl" id="l-dep">Who depends on you financially? <span class="opt-note">Pick all that apply</span></span>
+        <div class="opts"><label><input type="checkbox" name="dependents" value="Spouse"><span>Spouse</span></label><label><input type="checkbox" name="dependents" value="Children"><span>Children</span></label><label><input type="checkbox" name="dependents" value="Parents"><span>Parents</span></label><label><input type="checkbox" name="dependents" value="Nobody"><span>Nobody</span></label></div>
+      </div>
+      <div class="q" role="group" aria-labelledby="l-occ"><span class="lbl" id="l-occ">What do you do?</span>
+        <div class="opts"><label><input type="radio" name="occupation" value="Salaried"><span>Salaried</span></label><label><input type="radio" name="occupation" value="Business owner"><span>Business owner</span></label><label><input type="radio" name="occupation" value="Self-employed professional"><span>Self-employed professional</span></label><label><input type="radio" name="occupation" value="Retired"><span>Retired</span></label><label><input type="radio" name="occupation" value="Homemaker"><span>Homemaker</span></label><label><input type="radio" name="occupation" value="Other"><span>Other</span></label></div>
+      </div>
+    </fieldset>
+
+    <fieldset class="card">
+      <legend>Your money today</legend>
+      <p class="why">This shows how much you can invest and whether the safety net is in place first.</p>
+      <div class="q" role="group" aria-labelledby="l-inc"><span class="lbl" id="l-inc">Monthly take-home income of your household</span>
+        <div class="opts"><label><input type="radio" name="income" value="Under ₹50,000"><span>Under ₹50,000</span></label><label><input type="radio" name="income" value="₹50,000 to ₹1 lakh"><span>₹50,000 to ₹1 lakh</span></label><label><input type="radio" name="income" value="₹1 to ₹2 lakh"><span>₹1 to ₹2 lakh</span></label><label><input type="radio" name="income" value="₹2 to ₹5 lakh"><span>₹2 to ₹5 lakh</span></label><label><input type="radio" name="income" value="Above ₹5 lakh"><span>Above ₹5 lakh</span></label></div>
+      </div>
+      <div class="q" role="group" aria-labelledby="l-inv"><span class="lbl" id="l-inv">How much could you comfortably invest every month?</span>
+        <div class="opts"><label><input type="radio" name="invest_monthly" value="Under ₹5,000"><span>Under ₹5,000</span></label><label><input type="radio" name="invest_monthly" value="₹5,000 to ₹15,000"><span>₹5,000 to ₹15,000</span></label><label><input type="radio" name="invest_monthly" value="₹15,000 to ₹30,000"><span>₹15,000 to ₹30,000</span></label><label><input type="radio" name="invest_monthly" value="₹30,000 to ₹75,000"><span>₹30,000 to ₹75,000</span></label><label><input type="radio" name="invest_monthly" value="Above ₹75,000"><span>Above ₹75,000</span></label></div>
+      </div>
+      <div class="q" role="group" aria-labelledby="l-emg"><span class="lbl" id="l-emg">If your income stopped today, how long could your savings cover expenses?</span>
+        <div class="opts"><label><input type="radio" name="emergency" value="Less than 1 month"><span>Less than 1 month</span></label><label><input type="radio" name="emergency" value="1 to 3 months"><span>1 to 3 months</span></label><label><input type="radio" name="emergency" value="3 to 6 months"><span>3 to 6 months</span></label><label><input type="radio" name="emergency" value="More than 6 months"><span>More than 6 months</span></label></div>
+      </div>
+      <div class="q" role="group" aria-labelledby="l-ins"><span class="lbl" id="l-ins">Which insurance do you have in your own name? <span class="opt-note">Pick all that apply</span></span>
+        <div class="opts"><label><input type="checkbox" name="insurance" value="Term life insurance"><span>Term life insurance</span></label><label><input type="checkbox" name="insurance" value="Family health insurance"><span>Family health insurance</span></label><label><input type="checkbox" name="insurance" value="Only through my employer"><span>Only through my employer</span></label><label><input type="checkbox" name="insurance" value="None"><span>None</span></label></div>
+      </div>
+      <div class="q" role="group" aria-labelledby="l-debt"><span class="lbl" id="l-debt">Any loans or credit card dues above 12% interest?</span>
+        <div class="opts"><label><input type="radio" name="costly_debt" value="Yes"><span>Yes</span></label><label><input type="radio" name="costly_debt" value="No"><span>No</span></label><label><input type="radio" name="costly_debt" value="Not sure"><span>Not sure</span></label></div>
+      </div>
+    </fieldset>
+
+    <fieldset class="card">
+      <legend>What you already hold</legend>
+      <p class="why">A rough picture is enough. We will go through the details on our call.</p>
+      <div class="q" role="group" aria-labelledby="l-hold"><span class="lbl" id="l-hold">Where is your money invested today? <span class="opt-note">Pick all that apply</span></span>
+        <div class="opts"><label><input type="checkbox" name="holdings" value="Savings account or FDs"><span>Savings account or FDs</span></label><label><input type="checkbox" name="holdings" value="EPF or PPF"><span>EPF or PPF</span></label><label><input type="checkbox" name="holdings" value="NPS"><span>NPS</span></label><label><input type="checkbox" name="holdings" value="Mutual funds"><span>Mutual funds</span></label><label><input type="checkbox" name="holdings" value="Direct stocks"><span>Direct stocks</span></label><label><input type="checkbox" name="holdings" value="Gold"><span>Gold</span></label><label><input type="checkbox" name="holdings" value="Real estate"><span>Real estate</span></label><label><input type="checkbox" name="holdings" value="LIC or ULIP policies"><span>LIC or ULIP policies</span></label><label><input type="checkbox" name="holdings" value="Crypto"><span>Crypto</span></label><label><input type="checkbox" name="holdings" value="Nothing yet"><span>Nothing yet</span></label></div>
+      </div>
+      <div class="q" role="group" aria-labelledby="l-sip"><span class="lbl" id="l-sip">Total of your running SIPs per month</span>
+        <div class="opts"><label><input type="radio" name="sip_monthly" value="No SIPs yet"><span>No SIPs yet</span></label><label><input type="radio" name="sip_monthly" value="Under ₹10,000"><span>Under ₹10,000</span></label><label><input type="radio" name="sip_monthly" value="₹10,000 to ₹25,000"><span>₹10,000 to ₹25,000</span></label><label><input type="radio" name="sip_monthly" value="₹25,000 to ₹50,000"><span>₹25,000 to ₹50,000</span></label><label><input type="radio" name="sip_monthly" value="Above ₹50,000"><span>Above ₹50,000</span></label></div>
+      </div>
+    </fieldset>
+
+    <fieldset class="card">
+      <legend>Your goals</legend>
+      <p class="why">Every goal gets its own plan, so tell me what you are saving for.</p>
+      <div class="q" role="group" aria-labelledby="l-goals"><span class="lbl" id="l-goals">What are you saving for? <span class="opt-note">Pick all that apply</span></span>
+        <div class="opts"><label><input type="checkbox" name="goals" value="Emergency fund"><span>Emergency fund</span></label><label><input type="checkbox" name="goals" value="Retirement"><span>Retirement</span></label><label><input type="checkbox" name="goals" value="Child&#x27;s education"><span>Child&#x27;s education</span></label><label><input type="checkbox" name="goals" value="Child&#x27;s wedding"><span>Child&#x27;s wedding</span></label><label><input type="checkbox" name="goals" value="Buying a home"><span>Buying a home</span></label><label><input type="checkbox" name="goals" value="Car"><span>Car</span></label><label><input type="checkbox" name="goals" value="Travel"><span>Travel</span></label><label><input type="checkbox" name="goals" value="Wealth creation"><span>Wealth creation</span></label><label><input type="checkbox" name="goals" value="Other"><span>Other</span></label></div>
+      </div>
+      <div class="q"><label class="lbl" for="goal_details">Your most important goal: what it costs today and when you need it</label>
+        <textarea class="txt" id="goal_details" name="goal_details" placeholder="Example: Daughter's college, ₹25 lakh, in 10 years"></textarea>
+      </div>
+    </fieldset>
+
+    <fieldset class="card">
+      <legend>You and risk</legend>
+      <p class="why">There are no right answers. Honest ones help me pick funds you will stay with.</p>
+      <div class="q" role="group" aria-labelledby="l-rf"><span class="lbl" id="l-rf">Your ₹10 lakh portfolio falls to ₹8 lakh in three months. What do you do?</span>
+        <div class="opts stack"><label><input type="radio" name="risk_fall" value="Sell everything to stop the loss"><span>Sell everything to stop the loss</span></label><label><input type="radio" name="risk_fall" value="Sell some of it"><span>Sell some of it</span></label><label><input type="radio" name="risk_fall" value="Hold and wait"><span>Hold and wait</span></label><label><input type="radio" name="risk_fall" value="Invest more while prices are low"><span>Invest more while prices are low</span></label></div>
+      </div>
+      <div class="q" role="group" aria-labelledby="l-rd"><span class="lbl" id="l-rd">The biggest one-year fall you could live with without losing sleep</span>
+        <div class="opts"><label><input type="radio" name="risk_drop" value="Up to 5%"><span>Up to 5%</span></label><label><input type="radio" name="risk_drop" value="5% to 10%"><span>5% to 10%</span></label><label><input type="radio" name="risk_drop" value="10% to 20%"><span>10% to 20%</span></label><label><input type="radio" name="risk_drop" value="More than 20%"><span>More than 20%</span></label></div>
+      </div>
+      <div class="q" role="group" aria-labelledby="l-rh"><span class="lbl" id="l-rh">How long can this money stay invested before you need any of it?</span>
+        <div class="opts"><label><input type="radio" name="risk_horizon" value="Less than 1 year"><span>Less than 1 year</span></label><label><input type="radio" name="risk_horizon" value="1 to 3 years"><span>1 to 3 years</span></label><label><input type="radio" name="risk_horizon" value="3 to 7 years"><span>3 to 7 years</span></label><label><input type="radio" name="risk_horizon" value="More than 7 years"><span>More than 7 years</span></label></div>
+      </div>
+      <div class="q" role="group" aria-labelledby="l-rx"><span class="lbl" id="l-rx">How long have you invested in stocks or equity mutual funds?</span>
+        <div class="opts"><label><input type="radio" name="risk_experience" value="Never invested in equity"><span>Never invested in equity</span></label><label><input type="radio" name="risk_experience" value="Less than 2 years"><span>Less than 2 years</span></label><label><input type="radio" name="risk_experience" value="2 to 5 years"><span>2 to 5 years</span></label><label><input type="radio" name="risk_experience" value="More than 5 years"><span>More than 5 years</span></label></div>
+      </div>
+    </fieldset>
+
+    <fieldset class="card">
+      <legend>Anything else?</legend>
+      <div class="q"><label class="lbl" for="notes">Anything about money that worries you, or that I should know</label>
+        <textarea class="txt" id="notes" name="notes"></textarea>
+      </div>
+    </fieldset>
+
+    <div class="hp" aria-hidden="true"><label for="website">Leave this empty</label><input id="website" name="website" type="text" tabindex="-1" autocomplete="off"></div>
+
+    <div class="submit-row">
+      <button class="btn btn-primary" type="submit" id="q-submit" data-cta="q-submit">Send my answers</button>
+      <span class="form-msg" id="form-msg" role="status" aria-live="polite"></span>
+    </div>
+    <p class="consent">Your answers go only to Divesh and are used to prepare your plan. Mutual fund investments are subject to market risks; read all scheme-related documents carefully.</p>
+  </form>
+
+  <section class="done" id="done" tabindex="-1" hidden>
+    <h2>Thank you, I have your answers.</h2>
+    <p>I will go through them and message you on WhatsApp to set up your free financial health check-up. If you would rather pick a time now, book it below.</p>
+    <div class="cta-row">
+      <a class="btn btn-light" data-cta="q-done-book" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Book my free check-up</a>
+      <a class="btn btn-ghost-light" data-cta="q-done-calc" href="calculators.html">Try the Goal Planner</a>
+    </div>
+  </section>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <b>Divesh Rajesh Mehta, CFA</b><br>
+      AMFI-registered Mutual Fund Distributor<br>
+      ARN-371565<br>
+      © 2026 Divesh Rajesh Mehta
+    </div>
+    <div class="disc">
+      <p class="risk">Mutual fund investments are subject to market risks. Read all scheme-related documents carefully.</p>
+      <p>Divesh Rajesh Mehta acts as an AMFI-registered Mutual Fund Distributor and deals in the distribution of mutual fund products. He is not registered with SEBI as an Investment Adviser. Commission is received from the mutual fund houses whose schemes are distributed. Where a client opts for the annual fee, the fee is for financial habit coaching and education only and does not include investment advice. Past performance may or may not be sustained in future and is not a guarantee of future returns.</p>
+      <p>CFA® and Chartered Financial Analyst® are registered trademarks owned by CFA Institute.</p>
+    </div>
+  </div>
+</footer>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa-glyph" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol></svg>
+
+<script>
+// Investor questionnaire. Answers are posted to a Google Apps Script web app that adds a row to Divesh's Google Sheet.
+// Setup steps and the script itself are in google-sheet/README.md.
+(function(){
+  // Paste the web app URL from Apps Script (Deploy > Manage deployments) between the quotes.
+  var SHEET_URL='';
+  var WA='https://wa.me/917022388789?text=';
+
+  // Risk answers score 1 to 4 in the order listed; 4 answers give a total from 4 to 16.
+  var RISK={
+    risk_fall:["Sell everything to stop the loss", "Sell some of it", "Hold and wait", "Invest more while prices are low"],
+    risk_drop:["Up to 5%", "5% to 10%", "10% to 20%", "More than 20%"],
+    risk_horizon:["Less than 1 year", "1 to 3 years", "3 to 7 years", "More than 7 years"],
+    risk_experience:["Never invested in equity", "Less than 2 years", "2 to 5 years", "More than 5 years"],
+  };
+  var PROFILES=[[6,'Conservative'],[9,'Moderately conservative'],[12,'Moderate'],[14,'Moderately aggressive'],[16,'Aggressive']];
+  var FIELDS=[
+    ['phone','Phone'],['name','Name'],['email','Email'],['age','Age'],['dependents','Dependents'],['occupation','Occupation'],
+    ['income','Household take-home per month'],['invest_monthly','Can invest per month'],['emergency','Emergency cover'],
+    ['insurance','Insurance'],['costly_debt','Loans above 12%'],['holdings','Current holdings'],['sip_monthly','Running SIPs per month'],
+    ['goals','Goals'],['goal_details','Top goal'],['risk_fall','If portfolio falls 20%'],['risk_drop','Largest fall tolerated'],
+    ['risk_horizon','Investment horizon'],['risk_experience','Equity experience'],['notes','Notes']
+  ];
+
+  var form=document.getElementById('qform');
+  var phone=document.getElementById('phone');
+  var phoneErr=document.getElementById('phone-err');
+  var btn=document.getElementById('q-submit');
+  var msg=document.getElementById('form-msg');
+  var done=document.getElementById('done');
+
+  // Accepts a 10-digit Indian mobile (with or without 0 or 91 in front), or an international number starting with +.
+  function normPhone(raw){
+    var s=(raw||'').trim();
+    var intl=s.charAt(0)==='+';
+    var d=s.replace(/\D/g,'');
+    if(intl&&d.indexOf('91')!==0) return (d.length>=8&&d.length<=15)?'+'+d:null;
+    if(d.length===12&&d.indexOf('91')===0) d=d.slice(2);
+    else if(d.length===11&&d.charAt(0)==='0') d=d.slice(1);
+    return /^[6-9]\d{9}$/.test(d)?'+91'+d:null;
+  }
+
+  function collect(){
+    var fd=new FormData(form), data={};
+    FIELDS.forEach(function(f){ data[f[0]]=fd.getAll(f[0]).map(function(v){return String(v).trim();}).filter(Boolean).join(', '); });
+    data.phone=normPhone(phone.value)||phone.value.trim();
+    var score=0, n=0;
+    Object.keys(RISK).forEach(function(k){ var i=RISK[k].indexOf(data[k]); if(i>=0){score+=i+1;n++;} });
+    data.risk_score=n===4?String(score):'';
+    data.risk_profile='';
+    if(n===4) for(var i=0;i<PROFILES.length;i++){ if(score<=PROFILES[i][0]){data.risk_profile=PROFILES[i][1];break;} }
+    data.page=location.pathname+location.search;
+    return data;
+  }
+
+  function waLink(data){
+    var lines=['Hi Divesh, here are my questionnaire answers:'];
+    FIELDS.forEach(function(f){ if(data[f[0]]) lines.push(f[1]+': '+data[f[0]]); });
+    return WA+encodeURIComponent(lines.join('\n'));
+  }
+
+  function fail(data){
+    btn.disabled=false; btn.textContent='Send my answers';
+    msg.className='form-msg bad';
+    msg.innerHTML='';
+    msg.appendChild(document.createTextNode('That did not go through. '));
+    var a=document.createElement('a');
+    a.href=waLink(data); a.target='_blank'; a.rel='noopener'; a.textContent='Send them on WhatsApp instead';
+    msg.appendChild(a);
+  }
+
+  function success(){
+    form.hidden=true;
+    done.hidden=false;
+    done.scrollIntoView({block:'start'});
+    done.focus({preventScroll:true});
+  }
+
+  phone.addEventListener('input',function(){ if(phoneErr.textContent&&normPhone(phone.value)) phoneErr.textContent=''; });
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    if(!normPhone(phone.value)){
+      phoneErr.textContent=phone.value.trim()?'Please enter a valid 10-digit mobile number.':'Please add your mobile number so I can reach you.';
+      phone.setAttribute('aria-invalid','true');
+      phone.focus();
+      return;
+    }
+    phone.removeAttribute('aria-invalid');
+    phoneErr.textContent='';
+    if(form.website.value){ success(); return; } // bots fill the hidden field
+    var data=collect();
+    if(!SHEET_URL){ fail(data); return; }
+    btn.disabled=true; btn.textContent='Sending…';
+    msg.className='form-msg'; msg.textContent='';
+    // Apps Script does not send CORS headers, so the response is opaque; a network error is the only failure we can see.
+    fetch(SHEET_URL,{method:'POST',mode:'no-cors',body:new URLSearchParams(data)})
+      .then(success)
+      .catch(function(){ fail(data); });
+  });
+})();
+
+</script>
+</body>
+</html>
