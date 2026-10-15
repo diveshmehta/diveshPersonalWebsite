@@ -425,7 +425,7 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted);border-top:1p
   <section class="wrap how">
     <h2>How the numbers work</h2>
     <div class="how-grid">
-      <div><h3>1. What it will cost</h3><p>Your amount is in today's rupees. With inflation on, it's grown at that rate until the year you need it, because ₹25 lakh buys less in ten years than it does today.</p></div>
+      <div><h3>1. What it will cost</h3><p>You enter what the goal would cost if you needed it today. With inflation on, that amount is grown at that rate until the year you need it, because ₹25 lakh buys less in ten years than it does today.</p></div>
       <div><h3>2. What you already have</h3><p>Anything you've already saved for a goal is assumed to grow at the expected return, and the SIP only needs to cover the rest.</p></div>
       <div><h3>3. The SIP that closes the gap</h3><p>SIPs are invested at the start of each month. We use the true monthly equivalent of your yearly return, so growth is never overstated, and round each SIP up to the next ₹100.</p></div>
     </div>
@@ -581,7 +581,7 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted);border-top:1p
       '<input class="gname" maxlength="40" aria-label="Goal name" value="'+esc(g.name)+'">'+
       '<button type="button" class="gremove" aria-label="Remove this goal">×</button></div>'+
       '<div class="fields">'+
-        '<div class="field"><label for="amt'+g.id+'">Amount needed, in today\'s money</label>'+
+        '<div class="field"><label for="amt'+g.id+'">Amount you\'d need today for this goal</label>'+
           '<div class="money"><span>₹</span><input id="amt'+g.id+'" class="amt" inputmode="decimal" autocomplete="off" value="'+g.amount.toLocaleString('en-IN')+'"></div>'+
           '<span class="hint amt-hint"></span></div>'+
         '<div class="field"><label for="yr'+g.id+'">Years until you need it</label>'+
