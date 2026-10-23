@@ -3,10 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Divesh Mehta, CFA · Financial fitness trainer &amp; personal finance coach</title>
-<meta name="description" content="Money stress is rarely about income. Divesh Mehta, CFA, is a financial fitness trainer and personal finance coach who helps you build better money habits and stick to them. Your first three sessions are free. AMFI-registered Mutual Fund Distributor, ARN-371565.">
+<title>Fix Your Finance · Divesh Mehta, CFA, financial fitness trainer &amp; personal finance coach</title>
+<meta name="description" content="Money stress is rarely about income. Divesh Mehta, CFA, is a financial fitness trainer and personal finance coach who helps you build better money habits and stick to them. Start with a free 30-minute call. AMFI-registered Mutual Fund Distributor, ARN-371565.">
 <meta property="og:type" content="website">
-<meta property="og:site_name" content="Divesh Mehta, CFA">
+<meta property="og:site_name" content="Fix Your Finance · Divesh Mehta, CFA">
 <meta property="og:title" content="You earn well. So why does money still feel stressful?">
 <meta property="og:description" content="Better money habits, and a trainer to keep you on them. Start with a free financial health check-up with Divesh Mehta, CFA.">
 <meta property="og:image" content="https://fixyourfinance.in/og-image.jpg">
@@ -138,7 +138,7 @@ section.block{padding-block:88px}
 .tint{background:var(--surface);border-block:1px solid var(--line)}
 .head{display:flex;flex-direction:column;gap:14px;max-width:46em;margin-bottom:40px}
 .head p{color:var(--muted);font-size:1.08rem}
-@media (max-width:760px){section.block{padding-block:64px}}
+@media (max-width:760px){section.block{padding-block:52px}.head{margin-bottom:28px}}
 
 /* sound familiar */
 .familiar{display:grid;grid-template-columns:1.15fr 1fr;gap:48px;align-items:center}
@@ -158,7 +158,8 @@ section.block{padding-block:88px}
 @media (max-width:640px){.cost{grid-template-columns:1fr;gap:14px;padding:24px}}
 
 /* the idea */
-.compare{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.compare{display:grid;grid-template-columns:1fr 1.3fr;gap:16px}
+.cmp.me{grid-column:2;grid-row:1 / span 2;justify-content:center}
 .cmp{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;gap:10px;min-width:0}
 .cmp.me{border:2px solid var(--accent);background:var(--surface)}
 .cmp .k{font-size:.74rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
@@ -166,9 +167,11 @@ section.block{padding-block:88px}
 .cmp ul{list-style:none;margin:6px 0 0;padding:0;display:flex;flex-direction:column;gap:8px}
 .cmp li{color:var(--muted);font-size:.97rem;padding-left:18px;position:relative}
 .cmp li::before{content:"";position:absolute;left:0;top:.6em;width:8px;height:8px;border-radius:50%;background:var(--line)}
+.cmp > p{color:var(--muted);font-size:.97rem}
 .cmp.me li{color:var(--ink)}
 .cmp.me li::before{background:var(--accent)}
-@media (max-width:860px){.compare{grid-template-columns:1fr}}
+@media (max-width:860px){.compare{grid-template-columns:1fr 1fr;gap:12px}.cmp{padding:18px}.cmp.me{grid-column:1/-1;grid-row:auto}}
+@media (max-width:380px){.compare{grid-template-columns:1fr}}
 
 /* money vitals self-check */
 .vitals{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
@@ -193,7 +196,7 @@ section.block{padding-block:88px}
 .chip.bad{background:var(--bad-soft);color:var(--bad)}
 .vsum{font-size:1.08rem;max-width:44em}
 @media (max-width:860px){.vlist{grid-template-columns:1fr 1fr}}
-@media (max-width:760px){.vitals{grid-template-columns:1fr}.vlist{grid-template-columns:1fr}.vresult{padding:22px 20px}}
+@media (max-width:760px){.vitals{grid-template-columns:1fr;gap:10px}.vq{padding:16px 16px 14px}.vq legend{margin-bottom:10px;font-size:.98rem}.opts{gap:6px}.opts span{padding:.4em .8em;font-size:.92rem}.vlist{grid-template-columns:1fr}.vresult{padding:22px 20px}}
 
 /* why it happens: from -> to */
 .shifts{list-style:none;margin:0;padding:0;border-top:2px solid var(--ink)}
@@ -207,7 +210,9 @@ section.block{padding-block:88px}
 .shift .arrow{font-size:1.3rem;color:var(--muted);text-align:center;padding-top:2px}
 @media (max-width:760px){
   .shift-head{display:none}
-  .shift{grid-template-columns:1fr;gap:10px}
+  .shift{grid-template-columns:1fr;gap:10px;padding-block:18px}
+  .shift .from p{display:none}
+  .shift .from h3{margin-bottom:0}
   .shift .arrow{display:none}
   .shift .to{padding:12px 14px;border-left:3px solid var(--accent);background:var(--surface);border-radius:0 8px 8px 0}
   .shift .to::before{content:"Instead";display:block;font-size:.72rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
@@ -228,7 +233,7 @@ section.block{padding-block:88px}
 .ticks{display:flex;justify-content:space-between;font-size:.76rem;color:var(--deep-muted);gap:12px}
 .ticks span:last-child{text-align:right}
 .band .fine{color:var(--deep-muted)}
-@media (max-width:760px){.story{grid-template-columns:1fr;gap:28px}.band{padding-block:64px}}
+@media (max-width:760px){.story{grid-template-columns:1fr;gap:20px}.band{padding-block:52px}.big{font-size:5.5rem}}
 
 /* how it works */
 .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:2px solid var(--ink)}
@@ -255,7 +260,7 @@ section.block{padding-block:88px}
 .includes li{display:grid;grid-template-columns:20px 1fr;gap:6px;font-size:.97rem;font-weight:500}
 .includes li::before{content:"✓";color:var(--accent);font-weight:700}
 @media (max-width:900px){.includes{grid-template-columns:1fr 1fr}}
-@media (max-width:540px){.includes{grid-template-columns:1fr}}
+@media (max-width:540px){.includes{grid-template-columns:1fr 1fr;padding:14px 16px;font-size:.92rem}}
 .options{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 .opt{background:var(--bg);border:1px solid var(--line);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:12px;min-width:0}
 .opt .k{font-weight:600;font-size:.74rem;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
@@ -263,7 +268,7 @@ section.block{padding-block:88px}
 .opt ul{margin:0;padding-left:1.1em;color:var(--muted);font-size:.97rem;display:flex;flex-direction:column;gap:6px}
 .opt .fine{margin-top:auto;padding-top:6px}
 .opt-note{margin-top:20px;padding:18px 20px;border-left:4px solid var(--accent);background:var(--accent-soft);border-radius:var(--radius);font-size:1rem;max-width:52em}
-@media (max-width:760px){.options{grid-template-columns:1fr}}
+@media (max-width:760px){.options{grid-template-columns:1fr}.opt{padding:20px}}
 
 /* credentials */
 .creds{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
@@ -272,7 +277,7 @@ section.block{padding-block:88px}
 .cred .v{font-family:var(--font-display);font-size:1.3rem}
 .cred p{color:var(--muted);font-size:.95rem}
 .cred a{font-weight:600}
-@media (max-width:860px){.creds{grid-template-columns:1fr}}
+@media (max-width:860px){.creds{grid-template-columns:1fr;gap:12px}.cred{padding:18px 20px}}
 
 /* faq */
 .faq{display:flex;flex-direction:column;border-top:1px solid var(--line);max-width:52em}
@@ -306,6 +311,8 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
 .foot b{color:var(--ink);font-weight:600}
 .disc{display:flex;flex-direction:column;gap:10px}
 .risk{font-weight:600;color:var(--ink)}
+.foot-links{margin-top:14px}
+.foot-links a{color:var(--ink);font-weight:600}
 @media (max-width:760px){.foot{grid-template-columns:1fr;gap:24px}}
 
 /* phone: sticky contact bar once the hero buttons scroll away */
@@ -316,6 +323,35 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
   .mbar.show{transform:none;visibility:visible}
   .mbar .btn{flex:1 1 0;padding:.8em .6em;font-size:.95rem}
 }
+
+/* call-back pop-up */
+.cb{border:0;padding:0;margin:auto;width:min(460px,calc(100% - 32px));max-height:calc(100dvh - 32px);border-radius:14px;background:var(--surface);color:var(--ink);box-shadow:0 30px 80px -20px rgba(0,0,0,.5)}
+.cb::backdrop{background:rgba(6,14,26,.55)}
+.cb-in{position:relative;padding:28px 26px 24px;display:flex;flex-direction:column;gap:14px}
+.cb h2{font-size:1.45rem;padding-right:28px}
+.cb h2:focus{outline:none}
+.cb .sub{color:var(--muted);font-size:.98rem}
+.cb-x{position:absolute;top:10px;right:10px;width:40px;height:40px;border:0;background:none;color:var(--muted);font-size:1.6rem;line-height:1;cursor:pointer;border-radius:8px}
+.cb-x:hover{color:var(--ink);background:var(--bg)}
+.cb form{display:flex;flex-direction:column;gap:12px}
+.cb label.f{display:flex;flex-direction:column;gap:5px;font-weight:600;font-size:.92rem}
+.cb label.f small{font-weight:400;color:var(--muted)}
+.cb input[type=text],.cb input[type=tel],.cb select,.cb textarea{font:inherit;font-size:1rem;padding:.6em .75em;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--ink);width:100%}
+.cb textarea{resize:vertical;min-height:2.6em}
+.cb input:focus,.cb select:focus,.cb textarea:focus{outline:2px solid var(--accent);outline-offset:1px;border-color:var(--accent)}
+.cb .row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.cb .consent{display:grid;grid-template-columns:20px 1fr;gap:8px;font-size:.85rem;color:var(--muted);align-items:start}
+.cb .consent input{margin:3px 0 0;width:16px;height:16px;accent-color:var(--accent)}
+.cb .err{color:var(--bad);font-size:.88rem;min-height:0}
+.cb .err:empty{display:none}
+.cb .btn{width:100%}
+.cb .alt{font-size:.92rem;color:var(--muted);text-align:center}
+.cb .alt a{color:var(--accent);font-weight:600}
+.cb .trap{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.cb-done{display:flex;flex-direction:column;gap:14px}
+.cb-done[hidden],.cb-form[hidden]{display:none}
+.cb-val{font-weight:500!important;font-size:1rem!important;user-select:auto!important;word-break:normal!important}
+@media (max-width:420px){.cb .row2{grid-template-columns:1fr}.cb-in{padding:24px 18px 20px}}
 </style>
 </head>
 <body>
@@ -323,8 +359,8 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
 <header class="top">
   <div class="wrap">
     <a class="brand" href="#top">
-      <b>Divesh Mehta, CFA</b>
-      <small>AMFI-registered Mutual Fund Distributor · ARN-371565</small>
+      <b>Fix Your Finance</b>
+      <small>Divesh Mehta, CFA · AMFI-registered MFD · ARN-371565</small>
     </a>
     <nav aria-label="Main">
       <a class="link" href="#story">My story</a>
@@ -332,9 +368,8 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
       <a class="link" href="#fees">Fees</a>
       <a class="link" href="#faq">FAQ</a>
       <a class="link" href="calculators.html">Calculators</a>
-      <a class="link" href="questionnaire.html">Questionnaire</a>
       <a class="btn btn-ghost" data-cta="header-wa" href="https://wa.me/917022388789?text=Hi%20Divesh%2C%20I%20saw%20your%20website%20and%20I%27d%20like%20to%20know%20more%20about%20the%20free%20financial%20health%20check-up." target="_blank" rel="noopener"><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa-glyph"/></svg>WhatsApp</a>
-      <a class="btn btn-primary" data-cta="header-book" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Book free check-up</a>
+      <a class="btn btn-primary" data-cta="header-book" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Book free call</a>
     </nav>
   </div>
 </header>
@@ -346,12 +381,12 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
       <div class="hero-copy">
         <span class="eyebrow">Financial fitness trainer &amp; personal finance coach</span>
         <h1>You earn well. So why does money still feel <em>stressful</em>?</h1>
-        <p class="lede">You don't need a bigger salary or a hot tip. You need better money habits, and someone to keep you on them until money finally feels calm. <b>We start with a free financial health check-up.</b></p>
+        <p class="lede">You don't need a bigger salary or a hot tip. You need better money habits, and someone to keep you on them until money finally feels calm. <b>It starts with one free 30-minute call.</b></p>
         <div class="cta-row" id="hero-cta">
-          <a class="btn btn-primary" data-cta="hero-book" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Book my free check-up</a>
+          <a class="btn btn-primary" data-cta="hero-book" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Book my free call</a>
           <a class="btn btn-ghost" data-cta="hero-wa" href="https://wa.me/917022388789?text=Hi%20Divesh%2C%20I%20saw%20your%20website%20and%20I%27d%20like%20to%20know%20more%20about%20the%20free%20financial%20health%20check-up." target="_blank" rel="noopener"><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa-glyph"/></svg>WhatsApp me</a>
         </div>
-        <p class="free-note"><strong>Your first three sessions are completely free.</strong> No obligation to continue.</p>
+        <p class="free-note"><strong>The first call is free, and so are the two sessions after it.</strong> No obligation to continue.</p>
         <p class="where">On Google Meet from anywhere in India, or in person in Mumbai.</p>
       </div>
 
@@ -390,13 +425,6 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
         <div class="reframe">
           <p class="say">If you nodded along, you're not bad with money.</p>
           <p>Nobody teaches us this at school or at work, so most of us figure it out alone, by trial and error. The good news is that money habits can be trained, just like fitness. That's where I come in.</p>
-        </div>
-      </div>
-      <div class="cost">
-        <div class="fig">₹52 lakh<small>the cost of waiting 5 years</small></div>
-        <div>
-          <p>Someone who invests ₹10,000 a month from age 30 to 55 could end up with about ₹1.24 crore. Starting at 35 instead, the same habit could grow to about ₹72 lakh. Same effort each month, five years later, roughly ₹52 lakh less.</p>
-          <p class="fine">Illustration only, assuming a 10% annual return compounded monthly. This is not a projection or a promise of returns. Mutual fund investments are subject to market risks.</p>
         </div>
       </div>
       <p class="closer">None of these are fixed by a product. They are fixed by habits, and habits are easier to change with a trainer.</p>
@@ -438,22 +466,12 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
         <div class="cmp">
           <span class="k">For your body</span>
           <h3>A fitness trainer</h3>
-          <ul>
-            <li>Checks your starting point</li>
-            <li>Spots weak areas and bad form</li>
-            <li>Builds a routine around your goal</li>
-            <li>Keeps you showing up, week after week</li>
-          </ul>
+          <p>Checks your starting point, builds a routine and keeps you showing up.</p>
         </div>
         <div class="cmp">
           <span class="k">For your mind</span>
           <h3>A counsellor</h3>
-          <ul>
-            <li>Listens without judgement</li>
-            <li>Helps you understand your patterns</li>
-            <li>Builds healthier ways to cope</li>
-            <li>Checks in on how you're feeling</li>
-          </ul>
+          <p>Listens without judgement, and helps you understand and change your patterns.</p>
         </div>
         <div class="cmp me">
           <span class="k">For your money</span>
@@ -534,7 +552,7 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
         <ul class="vlist"></ul>
         <p class="vsum"></p>
         <div class="cta-row">
-          <a class="btn btn-primary" data-cta="vitals-book" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Book my free check-up</a>
+          <a class="btn btn-primary" data-cta="vitals-book" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Book my free call</a>
           <a class="btn btn-ghost" data-cta="vitals-wa" data-wa-result href="https://wa.me/917022388789" target="_blank" rel="noopener"><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa-glyph"/></svg>Send my results on WhatsApp</a>
         </div>
         <p class="fine">A rough self-check to help you reflect. It isn't advice, and your free check-up goes much deeper.</p>
@@ -568,21 +586,18 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
           <div class="to"><h3>Start small, start now</h3><p>A routine you can keep beats a perfect plan you keep postponing.</p></div>
         </li>
         <li class="shift">
-          <div class="from"><h3>No safety net</h3><p>Without an emergency fund, every surprise becomes a credit card bill or a broken investment.</p></div>
-          <span class="arrow" aria-hidden="true">→</span>
-          <div class="to"><h3>A cushion first</h3><p>Money set aside for surprises before investing, so they stop being emergencies.</p></div>
-        </li>
-        <li class="shift">
-          <div class="from"><h3>Investing on emotion and tips</h3><p>Buying what friends or social media are excited about, then selling in a panic when markets fall.</p></div>
-          <span class="arrow" aria-hidden="true">→</span>
-          <div class="to"><h3>Goals before products</h3><p>Every rupee linked to a goal you care about, and reviewed on a schedule, not on headlines.</p></div>
-        </li>
-        <li class="shift">
           <div class="from"><h3>No plan, and no one checking in</h3><p>Good intentions fade without clear goals and someone who holds you to them.</p></div>
           <span class="arrow" aria-hidden="true">→</span>
           <div class="to"><h3>A trainer in your corner</h3><p>A check-in every quarter to catch slips early and keep you going.</p></div>
         </li>
       </ol>
+      <div class="cost" id="cost">
+        <div class="fig">₹52 lakh<small>the cost of waiting 5 years</small></div>
+        <div>
+          <p>Someone who invests ₹10,000 a month from age 30 to 55 could end up with about ₹1.24 crore. Starting at 35 instead, the same habit could grow to about ₹72 lakh. Same effort each month, five years later, roughly ₹52 lakh less.</p>
+          <p class="fine">Illustration only, assuming a 10% annual return compounded monthly. This is not a projection or a promise of returns. Mutual fund investments are subject to market risks.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -592,10 +607,10 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
       <div class="head">
         <span class="eyebrow">How it works</span>
         <h2>Start with a free financial health check-up.</h2>
-        <p>Three relaxed sessions, on Google Meet or in person in Mumbai. You don't need to prepare anything, and we start with you, not with products.</p>
+        <p>It starts with one free 30-minute call, on Google Meet or in person in Mumbai. If it's useful, two more free sessions complete your check-up. You don't need to prepare anything, and we start with you, not with products.</p>
       </div>
       <div class="steps">
-        <div class="step"><span class="n">Session 1</span><span class="tag">Free</span><h3>Assess</h3><p>Where you are today: income, spending, savings, loans and investments, plus how you grew up with money. A full, honest starting point.</p></div>
+        <div class="step"><span class="n">First call · 30 min</span><span class="tag">Free</span><h3>Assess</h3><p>Where you are today: income, spending, savings, loans and investments, plus how you grew up with money. A full, honest starting point.</p></div>
         <div class="step"><span class="n">Session 2</span><span class="tag">Free</span><h3>Diagnose</h3><p>Your money vitals, and which habits are working for you and which are quietly costing you. No judgement, just a clear picture.</p></div>
         <div class="step"><span class="n">Session 3</span><span class="tag">Free</span><h3>Plan</h3><p>Your goals for yourself and your family, and the few habit changes that will make the biggest difference.</p></div>
         <div class="step"><span class="n">Then, if you choose</span><span class="tag">Every 3 months</span><h3>Train</h3><p>Regular check-ins to review progress, catch slips early and adjust as your life changes.</p></div>
@@ -603,7 +618,7 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
       <div class="after">
         <p class="keep">Whether or not we continue, you'll leave with a clear picture of where you stand and what to change first.</p>
         <div class="cta-row">
-          <a class="btn btn-primary" data-cta="how-book" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Book my free check-up</a>
+          <a class="btn btn-primary" data-cta="how-book" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Book my free call</a>
           <a class="btn btn-ghost" data-cta="how-wa" href="https://wa.me/917022388789?text=Hi%20Divesh%2C%20I%20saw%20your%20website%20and%20I%27d%20like%20to%20know%20more%20about%20the%20free%20financial%20health%20check-up." target="_blank" rel="noopener"><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa-glyph"/></svg>WhatsApp me</a>
         </div>
       </div>
@@ -669,16 +684,12 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
     <div class="wrap">
       <div class="head"><span class="eyebrow">Questions</span><h2>Things people usually ask</h2></div>
       <div class="faq">
-        <details><summary>What does a financial fitness trainer actually do?</summary><p>The same thing a fitness trainer or nutritionist does, applied to money. We understand your current situation, diagnose the habits that help and hurt you, set goals together, and then meet regularly so you stay on track while those habits change.</p></details>
-        <details><summary>What happens in the free check-up?</summary><p>Three sessions. In the first, we look at where you are today. In the second, we diagnose the habits that help and hurt you. In the third, we agree the few changes that will make the biggest difference. There's no fee and no commitment, and you don't need to prepare anything.</p></details>
+        <details><summary>What happens in the free check-up?</summary><p>It starts with a free 30-minute call where we look at where you are today. If it's useful, two more free sessions follow: one to diagnose the habits that help and hurt you, and one to agree the few changes that will make the biggest difference. There's no fee and no commitment, and you don't need to prepare anything. After that, you decide whether to continue.</p></details>
         <details><summary>Will you try to sell me something?</summary><p>No. The free sessions are about you and your habits, not products. If you later want help investing in mutual funds, you can choose to do it through me, or anywhere else. There's no obligation either way.</p></details>
         <details><summary>I'm embarrassed about my finances. Should I still reach out?</summary><p>Yes, please. Most people feel that way at first, and it usually means you're ready for a change. There's no judgement here, only a starting point.</p></details>
         <details><summary>Can my spouse or partner join?</summary><p>Yes. Money is usually a family matter, and it helps when both of you are part of the conversation.</p></details>
         <details><summary>Are you an investment adviser?</summary><p>No. I'm an AMFI-registered Mutual Fund Distributor, not a SEBI-registered Investment Adviser. The annual fee is for coaching and education on money habits, and doesn't include investment advice. If you choose to invest in mutual funds through me, I'm paid by commission from the fund houses, not by you.</p></details>
-        <details><summary>What happens after the three sessions?</summary><p>You decide. If you'd like to continue, you pick how to pay (a flat annual fee, or commission if you invest through me), and we meet every three months to review your progress. If not, you'll still leave with a much clearer picture of where you stand.</p></details>
-        <details><summary>What if I fall off track?</summary><p>You will, at some point. Everyone does. That is exactly what the quarterly check-ins are for: we notice it early, work out what got in the way, and adjust the plan so it fits your real life.</p></details>
         <details><summary>Do I need a lot of money to start?</summary><p>No. Many people I talk to are just getting serious about saving. Starting early with a clear plan matters more than starting big.</p></details>
-        <details><summary>Can we meet online?</summary><p>Yes. We can meet in person in Mumbai, or on Google Meet from anywhere in India. You choose when you book.</p></details>
         <details><summary>Can you promise returns?</summary><p>No one honestly can. Mutual fund returns depend on markets. What I can do is help you build good habits, stay disciplined, and avoid costly mistakes.</p></details>
       </div>
     </div>
@@ -689,19 +700,23 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
     <div class="wrap contact-grid">
       <div class="head">
         <span class="eyebrow">Your next step</span>
-        <h2>Book your free financial health check-up.</h2>
-        <p>Pick a time that suits you on my calendar, or send me a WhatsApp message if you'd like to ask something first. I reply to every message personally.</p>
+        <h2>Book your free 30-minute call.</h2>
+        <p>Pick a time that suits you on my calendar, or send me a WhatsApp message if you'd like to ask something first. I reply to every message personally, usually the same day.</p>
         <ol class="next">
-          <li><div><b>Pick a time, or message me</b><span>Choose Google Meet or in person in Mumbai when you book.</span></div></li>
+          <li><div><b>Pick a time, or message me</b><span>A free 30-minute call, on Google Meet or in person in Mumbai.</span></div></li>
           <li><div><b>We talk</b><span>You don't need to prepare anything. We start by understanding where you are today.</span></div></li>
-          <li><div><b>You decide</b><span>After three free sessions, continue only if it's helping.</span></div></li>
+          <li><div><b>You decide</b><span>Two more free sessions if it's useful, then continue only if it's helping.</span></div></li>
         </ol>
         <div class="cta-row" style="margin-top:8px">
-          <a class="btn btn-primary" id="book-link" data-cta="final-book" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Book my free check-up</a>
+          <a class="btn btn-primary" id="book-link" data-cta="final-book" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Book my free call</a>
           <a class="btn btn-ghost" data-cta="final-wa" href="https://wa.me/917022388789?text=Hi%20Divesh%2C%20I%20saw%20your%20website%20and%20I%27d%20like%20to%20know%20more%20about%20the%20free%20financial%20health%20check-up." target="_blank" rel="noopener"><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa-glyph"/></svg>WhatsApp me</a>
         </div>
       </div>
       <div class="channels">
+        <div class="channel cb-channel">
+          <div><span class="lbl">Prefer I call you?</span><span class="val cb-val">Leave your number and I'll call you back</span></div>
+          <div class="acts"><button class="mini" type="button" data-callback-open="contact">Request a call back</button></div>
+        </div>
         <div class="channel">
           <div><span class="lbl">Phone and WhatsApp</span><span class="val" id="phone">+91 70223 88789</span></div>
           <div class="acts"><a class="mini" href="tel:+917022388789">Call</a><a class="mini" data-cta="contact-wa" href="https://wa.me/917022388789" target="_blank" rel="noopener">WhatsApp</a></div>
@@ -722,6 +737,7 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
       AMFI-registered Mutual Fund Distributor<br>
       ARN-371565<br>
       © 2026 Divesh Rajesh Mehta
+      <p class="foot-links">Already working with me? Fill in the <a href="questionnaire.html">client questionnaire</a>. · <a href="calculators.html">Goal Planner</a></p>
     </div>
     <div class="disc">
       <p class="risk">Mutual fund investments are subject to market risks. Read all scheme-related documents carefully.</p>
@@ -731,9 +747,40 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
   </div>
 </footer>
 
+<dialog class="cb" id="cb" aria-labelledby="cb-title">
+  <div class="cb-in">
+    <button class="cb-x" type="button" data-cb-close aria-label="Close">×</button>
+    <div class="cb-form">
+      <form id="cb-form" novalidate>
+        <span class="eyebrow">Prefer a call back?</span>
+        <h2 id="cb-title" tabindex="-1" autofocus>Leave your number, and I'll call you.</h2>
+        <p class="sub">I'll call or WhatsApp you, usually the same day, to set up your free 30-minute call. No spam, and your number is never shared.</p>
+        <label class="f">Your name<input type="text" name="name" autocomplete="name" required maxlength="80"></label>
+        <div class="row2">
+          <label class="f">WhatsApp number<input type="tel" name="phone" autocomplete="tel" inputmode="tel" required maxlength="20" placeholder="98765 43210"></label>
+          <label class="f">Best time to call<select name="best_time"><option>Any time</option><option>Morning</option><option>Afternoon</option><option>Evening</option><option>Weekend</option></select></label>
+        </div>
+        <label class="f"><span>What's on your mind? <small>(optional)</small></span><textarea name="message" rows="2" maxlength="600" placeholder="For example: I want to start saving properly"></textarea></label>
+        <label class="trap" aria-hidden="true">Website<input type="text" name="website" tabindex="-1" autocomplete="off"></label>
+        <label class="consent"><input type="checkbox" name="consent" required><span>I'm happy for Divesh Mehta to contact me on this number about the free call.</span></label>
+        <p class="err" id="cb-err" role="alert"></p>
+        <button class="btn btn-primary" type="submit">Call me back</button>
+        <p class="alt">Or <a data-cta="popup-wa" href="https://wa.me/917022388789?text=Hi%20Divesh%2C%20I%20saw%20your%20website%20and%20I%27d%20like%20to%20know%20more%20about%20the%20free%20financial%20health%20check-up." target="_blank" rel="noopener">WhatsApp me now</a> · <a data-cta="popup-book" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">pick a time yourself</a></p>
+      </form>
+    </div>
+    <div class="cb-done" hidden>
+      <span class="eyebrow">Thank you</span>
+      <h2 tabindex="-1" id="cb-done-title">Got it. I'll be in touch soon.</h2>
+      <p class="sub">I'll call or WhatsApp you, usually the same day. If you'd rather not wait, pick a time on my calendar.</p>
+      <a class="btn btn-primary" data-cta="popup-done-book" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Pick a time now</a>
+      <button class="btn btn-ghost" type="button" data-cb-close>Close</button>
+    </div>
+  </div>
+</dialog>
+
 <nav class="mbar" id="mbar" aria-label="Contact Divesh">
   <a class="btn btn-ghost" data-cta="bar-wa" href="https://wa.me/917022388789?text=Hi%20Divesh%2C%20I%20saw%20your%20website%20and%20I%27d%20like%20to%20know%20more%20about%20the%20free%20financial%20health%20check-up." target="_blank" rel="noopener"><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa-glyph"/></svg>WhatsApp</a>
-  <a class="btn btn-primary" data-cta="bar-book" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Book free check-up</a>
+  <a class="btn btn-primary" data-cta="bar-book" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Book free call</a>
 </nav>
 
 <svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="wa-glyph" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></symbol></svg>
@@ -807,6 +854,84 @@ document.querySelectorAll('[data-copy]').forEach(function(btn){
     bar.classList.toggle('show',!heroIn&&!contactIn);
   });
   io.observe(hero); io.observe(contact);
+})();
+
+// Call-back pop-up: opens once per visitor after they've read a while (or on leaving, on desktop),
+// never after they've already tapped Book or WhatsApp. Saves to the same Google Sheet as the questionnaire.
+(function(){
+  var SHEET_URL='https://script.google.com/macros/s/AKfycbzwo_AlEag1lv4hNsiccfTxHVKvb9TCeflHIdIs_GxA6NsglsRhFccWgNovJ2JUHwbt/exec';
+  var dlg=document.getElementById('cb'), form=document.getElementById('cb-form');
+  if(!dlg||!form||typeof dlg.showModal!=='function') {
+    document.querySelectorAll('[data-callback-open]').forEach(function(b){ b.closest('.channel').hidden=true; });
+    return;
+  }
+  var KEY='cb-state', REST=14*864e5, trigger='', done=false;
+  function get(){ try{ return JSON.parse(localStorage.getItem(KEY)||'{}'); }catch(e){ return {}; } }
+  function set(v){ try{ localStorage.setItem(KEY,JSON.stringify(v)); }catch(e){} }
+  function quiet(){ var st=get(); return st.sent || st.acted || (st.seen && Date.now()-st.seen<REST); }
+  function open(how){
+    if(dlg.open) return;
+    trigger=how; dlg.showModal();
+    if(how!=='contact') set(Object.assign(get(),{seen:Date.now()}));
+  }
+  function close(){ dlg.close(); }
+  document.querySelectorAll('[data-callback-open]').forEach(function(b){ b.addEventListener('click',function(){ open('contact'); }); });
+  dlg.querySelectorAll('[data-cb-close]').forEach(function(b){ b.addEventListener('click',close); });
+  dlg.addEventListener('click',function(e){ if(e.target===dlg) close(); });
+
+  // Anyone who taps Book or WhatsApp has converted: don't interrupt them later.
+  document.addEventListener('click',function(e){
+    var a=e.target.closest && e.target.closest('[data-cta]');
+    if(a) set(Object.assign(get(),{acted:Date.now()}));
+  });
+
+  // Auto-open: 40 seconds on the page and scrolled past the story, or the mouse heads for the tab bar.
+  if(!quiet()){
+    var start=Date.now(), story=document.getElementById('story'), past=false, armed=false;
+    function check(){
+      if(done||quiet()||!past||Date.now()-start<40000) return;
+      if(document.querySelector('dialog[open]')) return;
+      done=true; open('timed');
+    }
+    window.addEventListener('scroll',function(){
+      if(!past && story && story.getBoundingClientRect().bottom<0) past=true;
+      check();
+    },{passive:true});
+    setInterval(check,5000);
+    setTimeout(function(){ armed=true; },15000);
+    document.addEventListener('mouseout',function(e){
+      if(!armed||done||quiet()||e.relatedTarget||e.clientY>0) return;
+      if(!window.matchMedia('(hover:hover) and (pointer:fine)').matches) return;
+      done=true; open('leaving');
+    });
+  }
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var err=document.getElementById('cb-err'), d=new FormData(form);
+    var name=String(d.get('name')||'').trim(), phone=String(d.get('phone')||'').trim();
+    var digits=phone.replace(/\D/g,'');
+    err.textContent='';
+    if(!name){ err.textContent='Please add your name.'; form.elements['name'].focus(); return; }
+    if(digits.length<10||digits.length>13){ err.textContent='Please add a 10-digit mobile number.'; form.elements['phone'].focus(); return; }
+    if(!form.elements['consent'].checked){ err.textContent='Please tick the box so I can contact you.'; form.elements['consent'].focus(); return; }
+    var best=String(d.get('best_time')||''), msg=String(d.get('message')||'').trim();
+    var data={form:'callback',name:name,phone:phone,best_time:best,message:msg,trigger:trigger,
+      notes:'Call-back request. Best time: '+best+(msg?'. Message: '+msg:''),
+      page:'Call-back pop-up · '+location.href,website:String(d.get('website')||'')};
+    var btn=form.querySelector('button[type=submit]'); btn.disabled=true; btn.textContent='Sending…';
+    fetch(SHEET_URL,{method:'POST',mode:'no-cors',body:new URLSearchParams(data)}).then(function(){
+      set(Object.assign(get(),{sent:Date.now()}));
+      dlg.querySelector('.cb-form').hidden=true;
+      var ok=dlg.querySelector('.cb-done'); ok.hidden=false;
+      document.getElementById('cb-done-title').textContent='Thanks, '+name.split(' ')[0]+". I'll be in touch soon.";
+      document.getElementById('cb-done-title').focus();
+    }).catch(function(){
+      var wa='Hi Divesh, please call me back about the free call.\nName: '+name+'\nNumber: '+phone+'\nBest time: '+best+(msg?'\n'+msg:'');
+      err.innerHTML='That didn\'t go through. <a target="_blank" rel="noopener" href="https://wa.me/917022388789?text='+encodeURIComponent(wa)+'">Send it on WhatsApp instead</a>.';
+      btn.disabled=false; btn.textContent='Call me back';
+    });
+  });
 })();
 </script>
 </body>

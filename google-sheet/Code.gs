@@ -1,4 +1,5 @@
-// Receives questionnaire.html submissions and adds one row per submission to this spreadsheet.
+// Receives questionnaire.html submissions and call-back requests from the home page pop-up,
+// and adds one row per submission to this spreadsheet.
 // Paste into Extensions > Apps Script of the Google Sheet, then deploy as a web app (see README.md).
 
 var SHEET_NAME = 'Responses';
@@ -29,18 +30,33 @@ var COLUMNS = [
   ['page', 'Page']
 ];
 
+// Call-back requests from the pop-up on index.html go to their own tab.
+var CALLBACK_SHEET = 'Call-backs';
+var CALLBACK_COLUMNS = [
+  ['submitted_at', 'Submitted at'],
+  ['name', 'Name'],
+  ['phone', 'Phone'],
+  ['best_time', 'Best time to call'],
+  ['message', 'Message'],
+  ['trigger', 'How the pop-up opened'],
+  ['page', 'Page']
+];
+
 function doPost(e) {
   var lock = LockService.getScriptLock();
   lock.waitLock(10000);
   try {
     var p = (e && e.parameter) || {};
     if (p.website) return ok_(); // hidden spam-trap field
-    var sheet = sheet_();
-    var row = COLUMNS.map(function (c) {
+    var callback = p.form === 'callback';
+    var columns = callback ? CALLBACK_COLUMNS : COLUMNS;
+    var sheet = sheet_(callback ? CALLBACK_SHEET : SHEET_NAME, columns);
+    var row = columns.map(function (c) {
       if (c[0] === 'submitted_at') return new Date();
       return safe_(String(p[c[0]] || '').slice(0, 2000));
     });
     sheet.appendRow(row);
+    if (callback) notify_(p);
     return ok_();
   } finally {
     lock.releaseLock();
@@ -51,15 +67,26 @@ function doGet() {
   return ContentService.createTextOutput('Questionnaire endpoint is running.');
 }
 
-function sheet_() {
+function sheet_(name, columns) {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
-  var sheet = ss.getSheetByName(SHEET_NAME) || ss.insertSheet(SHEET_NAME);
+  var sheet = ss.getSheetByName(name) || ss.insertSheet(name);
   if (sheet.getLastRow() === 0) {
-    sheet.appendRow(COLUMNS.map(function (c) { return c[1]; }));
-    sheet.getRange(1, 1, 1, COLUMNS.length).setFontWeight('bold');
+    sheet.appendRow(columns.map(function (c) { return c[1]; }));
+    sheet.getRange(1, 1, 1, columns.length).setFontWeight('bold');
     sheet.setFrozenRows(1);
   }
   return sheet;
+}
+
+// Emails you each call-back request so you can ring them while they're still interested.
+function notify_(p) {
+  try {
+    var body = 'Name: ' + (p.name || '') + '\nPhone: ' + (p.phone || '') + '\nBest time: ' + (p.best_time || '') +
+      '\nMessage: ' + (p.message || '') + '\n\nWhatsApp them: https://wa.me/' + String(p.phone || '').replace(/\D/g, '').replace(/^(\d{10})$/, '91$1');
+    MailApp.sendEmail(Session.getEffectiveUser().getEmail(), 'Call-back request: ' + (p.name || 'new visitor'), body);
+  } catch (err) {
+    // The row is already saved; a failed email shouldn't lose the request.
+  }
 }
 
 // Stops Sheets from reading "+91..." as a number or any answer as a formula.
