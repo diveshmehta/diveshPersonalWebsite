@@ -108,6 +108,9 @@ header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;backgroun
 .free-note{font-size:1.1rem;color:var(--muted)}
 .free-note strong{color:var(--ink)}
 .where{font-size:.95rem;color:var(--muted);margin-top:-12px}
+.badges{list-style:none;margin:-6px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
+.badges li{font-size:.85rem;font-weight:600;padding:.35em .8em;border-radius:999px;background:var(--accent-soft);color:var(--ink);display:inline-flex;align-items:center;gap:.45em}
+.badges li::before{content:"✓";color:var(--accent);font-weight:700}
 
 .portrait{position:relative;max-width:420px;width:100%;justify-self:end}
 .photo{aspect-ratio:4/5;width:100%;max-width:100%;border-radius:var(--radius);background:
@@ -156,6 +159,17 @@ section.block{padding-block:88px}
 .cost .fine{margin-top:8px;color:var(--deep-muted)}
 .closer{margin-top:28px;font-family:var(--font-display);font-size:1.25rem;max-width:36em}
 @media (max-width:640px){.cost{grid-template-columns:1fr;gap:14px;padding:24px}}
+
+/* goals */
+.goals{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.goal{display:flex;flex-direction:column;gap:6px;padding:20px 22px;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);text-decoration:none;color:var(--ink);transition:border-color .15s,transform .15s}
+.goal:hover{border-color:var(--accent);transform:translateY(-1px)}
+.goal b{font-family:var(--font-display);font-weight:400;font-size:1.15rem;line-height:1.3}
+.goal span{color:var(--muted);font-size:.95rem}
+.goal em{margin-top:auto;padding-top:8px;font-style:normal;font-weight:600;font-size:.9rem;color:var(--accent);display:inline-flex;align-items:center;gap:.4em}
+.goal .wa-i{width:1.1em;height:1.1em;fill:var(--wa)}
+@media (max-width:860px){.goals{grid-template-columns:1fr 1fr}}
+@media (max-width:540px){.goals{gap:10px}.goal{padding:14px}.goal b{font-size:1.02rem}.goal span{display:none}.goal em{font-size:.85rem}}
 
 /* the idea */
 .compare{display:grid;grid-template-columns:1fr 1.3fr;gap:16px}
@@ -381,13 +395,18 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
       <div class="hero-copy">
         <span class="eyebrow">Financial fitness trainer &amp; personal finance coach</span>
         <h1>You earn well. So why does money still feel <em>stressful</em>?</h1>
-        <p class="lede">You don't need a bigger salary or a hot tip. You need better money habits, and someone to keep you on them until money finally feels calm. <b>It starts with one free 30-minute call.</b></p>
+        <p class="lede">You don't need a bigger salary or a hot tip. You need better money habits, and someone to keep you on them until money finally feels calm. <b>It starts with one free 30&#8209;minute call.</b></p>
         <div class="cta-row" id="hero-cta">
           <a class="btn btn-primary" data-cta="hero-book" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ2w6ZlM7ujt99Co5jTksW_MuO987_vQbVDvPWx6TRe150QOjID4Nbf0H_mEeRvupu9k-EcCIva9" target="_blank" rel="noopener">Book my free call</a>
           <a class="btn btn-ghost" data-cta="hero-wa" href="https://wa.me/917022388789?text=Hi%20Divesh%2C%20I%20saw%20your%20website%20and%20I%27d%20like%20to%20know%20more%20about%20the%20free%20financial%20health%20check-up." target="_blank" rel="noopener"><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa-glyph"/></svg>WhatsApp me</a>
         </div>
         <p class="free-note"><strong>The first call is free, and so are the two sessions after it.</strong> No obligation to continue.</p>
-        <p class="where">On Google Meet from anywhere in India, or in person in Mumbai.</p>
+        <ul class="badges" aria-label="About Divesh">
+          <li>CFA charterholder</li>
+          <li>AMFI ARN-371565</li>
+          <li>12 years of building money habits</li>
+          <li>Online across India, or in person in Mumbai</li>
+        </ul>
       </div>
 
       <div class="portrait">
@@ -450,6 +469,25 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
           <a class="btn btn-light" data-cta="story-wa" href="https://wa.me/917022388789?text=Hi%20Divesh%2C%20I%20read%20your%20story%20on%20your%20website%20and%20I%27d%20like%20to%20know%20more%20about%20the%20free%20financial%20health%20check-up." target="_blank" rel="noopener"><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa-glyph"/></svg>Talk to me on WhatsApp</a>
         </div>
         <p class="fine">This is my personal journey. Every family's situation is different, and my results are not a promise of yours.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- GOALS -->
+  <section class="block" id="goals">
+    <div class="wrap">
+      <div class="head">
+        <span class="eyebrow">Where would you like to start?</span>
+        <h2>Pick what matters most to you right now.</h2>
+        <p>Tap one and it opens WhatsApp with a short message ready to send. I'll reply personally and we'll set up your free call.</p>
+      </div>
+      <div class="goals">
+        <a class="goal" data-cta="goal-emergency" href="https://wa.me/917022388789?text=Hi%20Divesh%2C%20I%20saw%20your%20website.%20I%27d%20like%20help%20to%20build%20an%20emergency%20fund.%20Can%20we%20set%20up%20the%20free%20call%3F" target="_blank" rel="noopener"><b>Build an emergency fund</b><span>So a surprise bill stops being a crisis.</span><em><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa-glyph"/></svg>Ask me about this</em></a>
+        <a class="goal" data-cta="goal-debt" href="https://wa.me/917022388789?text=Hi%20Divesh%2C%20I%20saw%20your%20website.%20I%27d%20like%20help%20to%20get%20out%20of%20loan%20or%20credit%20card%20debt.%20Can%20we%20set%20up%20the%20free%20call%3F" target="_blank" rel="noopener"><b>Get out of loan or credit card debt</b><span>A plan to clear it, and stay clear.</span><em><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa-glyph"/></svg>Ask me about this</em></a>
+        <a class="goal" data-cta="goal-child" href="https://wa.me/917022388789?text=Hi%20Divesh%2C%20I%20saw%20your%20website.%20I%27d%20like%20help%20to%20save%20for%20my%20child%27s%20education.%20Can%20we%20set%20up%20the%20free%20call%3F" target="_blank" rel="noopener"><b>Save for my child's future</b><span>Education and milestones, without the panic later.</span><em><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa-glyph"/></svg>Ask me about this</em></a>
+        <a class="goal" data-cta="goal-home" href="https://wa.me/917022388789?text=Hi%20Divesh%2C%20I%20saw%20your%20website.%20I%27d%20like%20help%20to%20save%20for%20a%20home.%20Can%20we%20set%20up%20the%20free%20call%3F" target="_blank" rel="noopener"><b>Buy a home</b><span>Know what you can afford, and get there.</span><em><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa-glyph"/></svg>Ask me about this</em></a>
+        <a class="goal" data-cta="goal-fi" href="https://wa.me/917022388789?text=Hi%20Divesh%2C%20I%20saw%20your%20website.%20I%27d%20like%20help%20to%20plan%20for%20retiring%20early.%20Can%20we%20set%20up%20the%20free%20call%3F" target="_blank" rel="noopener"><b>Retire early, or simply retire well</b><span>Work because you want to, not because you have to.</span><em><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa-glyph"/></svg>Ask me about this</em></a>
+        <a class="goal" data-cta="goal-organise" href="https://wa.me/917022388789?text=Hi%20Divesh%2C%20I%20saw%20your%20website.%20I%27d%20like%20help%20to%20get%20my%20money%20organised.%20Can%20we%20set%20up%20the%20free%20call%3F" target="_blank" rel="noopener"><b>Just get my money organised</b><span>Know where it goes, and feel calm about it.</span><em><svg class="wa-i" viewBox="0 0 24 24" aria-hidden="true"><use href="#wa-glyph"/></svg>Ask me about this</em></a>
       </div>
     </div>
   </section>
@@ -685,6 +723,8 @@ footer{padding-block:48px 56px;font-size:.86rem;color:var(--muted)}
       <div class="head"><span class="eyebrow">Questions</span><h2>Things people usually ask</h2></div>
       <div class="faq">
         <details><summary>What happens in the free check-up?</summary><p>It starts with a free 30-minute call where we look at where you are today. If it's useful, two more free sessions follow: one to diagnose the habits that help and hurt you, and one to agree the few changes that will make the biggest difference. There's no fee and no commitment, and you don't need to prepare anything. After that, you decide whether to continue.</p></details>
+        <details><summary>Is my information safe with you?</summary><p>Yes. What you share stays between us and is used only to help you. I will never ask for your passwords, OTPs or PINs, and I never share your details with anyone.</p></details>
+        <details><summary>How soon will you get back to me?</summary><p>I reply to every message personally, usually the same day. If you book a time on my calendar, you'll get a confirmation straight away.</p></details>
         <details><summary>Will you try to sell me something?</summary><p>No. The free sessions are about you and your habits, not products. If you later want help investing in mutual funds, you can choose to do it through me, or anywhere else. There's no obligation either way.</p></details>
         <details><summary>I'm embarrassed about my finances. Should I still reach out?</summary><p>Yes, please. Most people feel that way at first, and it usually means you're ready for a change. There's no judgement here, only a starting point.</p></details>
         <details><summary>Can my spouse or partner join?</summary><p>Yes. Money is usually a family matter, and it helps when both of you are part of the conversation.</p></details>
