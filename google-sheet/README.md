@@ -21,3 +21,11 @@ The script creates a **Responses** tab with headers on the first submission. Eve
 Until `SHEET_URL` is set, the form offers to send the answers on WhatsApp instead.
 
 If you later edit `Code.gs`, use **Deploy > Manage deployments > Edit > New version** so the URL stays the same.
+
+## Call-back pop-up
+
+The home page has a "Prefer a call back?" pop-up that posts to the same web app with `form=callback`. The updated `Code.gs` saves those to a separate **Call-backs** tab (name, phone, best time, message) and emails you each one.
+
+To switch it on, paste the new `Code.gs` into Apps Script, then use **Deploy > Manage deployments > Edit > New version > Deploy**, and allow the new email permission Google asks for. The URL stays the same, so no site change is needed.
+
+Until you do, call-back requests still arrive, as rows in the **Responses** tab with the name, phone, and best time in the Notes column.
